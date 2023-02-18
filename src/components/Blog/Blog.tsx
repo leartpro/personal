@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {Project} from "../../types/Project";
 
-const Blog = ({ projects }) => {
+const Blog = ({ projects }: { projects: Project[] }) => {
     return (
         <div className="blog">
             <div className="blog-grid">

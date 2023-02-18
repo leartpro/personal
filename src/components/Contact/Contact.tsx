@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, {useState} from "react";
-import Blog from "../Blog/Blog";
 
 const Contact = () => {
     const [name, setName] = useState('');

@@ -1,6 +1,7 @@
 import ProjectPreview from './ProjectPreview';
+import {Project} from "../../types/Project";
 
-function ProjectGrid({ projects }) {
+const ProjectGrid = ({ projects }: { projects: Project[] }) => {
     return (
         <div className="project-grid">
             {projects.map((project) => (

@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 
-function ParallaxImage({ imageSrc }) {
+type ParallaxImageProps = {
+    imageSrc: string;
+};
+
+function ParallaxImage({ imageSrc }: ParallaxImageProps) {
     const [scrollPosition, setScrollPosition] = useState(0);
 
     useEffect(() => {
