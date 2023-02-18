@@ -1,12 +1,13 @@
 import axios from 'axios';
-import {useState} from "react";
+import React, {useState} from "react";
+import Blog from "../Blog/Blog";
 
-function Contact() {
+const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = { name, email, message };
         axios.post('/submit-form', data)
@@ -59,3 +60,5 @@ function Contact() {
         </section>
     );
 }
+
+export default Contact;
