@@ -16,12 +16,12 @@ p {
 .animated-div {
     display: inline-block;
     position: relative;
-    animation-name: slidein;
+    animation-name: slide_in;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
-@keyframes slidein {
+@keyframes slide_in {
     from {
         left: 100%;
     }
