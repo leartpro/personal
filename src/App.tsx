@@ -1,40 +1,34 @@
-import React, {useEffect} from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import './styles/App.css';
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Blog from "./components/Blog/Blog";
-import ProjectDetails from "./components/Blog/ProjectDetails";
 import Contact from "./components/Contact/Contact";
-
-export async function getProjects() {
-    const response = await fetch("path/to/projects.json");
-    const data = await response.json();
-    return data;
-}
-
+import MyJourney from "./components/MyJourney/MyJourney";
+import {Project} from "./types/Project";
 
 function App() {
-    useEffect(() => {
+    const [projects, setProjects] = useState<Project[]>([]);
         async function fetchProjects() {
-            const data = await getProjects();
-            setProjects(data);
+            const response = await fetch("../projects.json");
+            return await response.json();
         }
-        fetchProjects();
+    useEffect(() => {
+        fetchProjects().then(data => {
+            setProjects(data);
+        });
     }, []);
   return (
       <div className="app">
         <Router>
           <Header />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/my-journey" component={MyJourney} />
-            <Route exact path="/blog" component={Blog} />
-            <Route path="/blog/:id" component={ProjectDetails} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
+            <Route path={"/"} element={<Home/>} />
+            <Route path={"/about"} element={<About/>} />
+            <Route path={"/my-journey"} element={<MyJourney/>} />
+            <Route path={"/blog"} element={<Blog projects={projects}/>} />
+            <Route path={"/contact"} element={<Contact/>} />
         </Router>
       </div>
   );
