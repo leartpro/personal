@@ -18,8 +18,9 @@ function ParallaxImage({ imageSrc }: ParallaxImageProps) {
     }, []);
 
     return (
-        <div className="parallax-image" style={{ backgroundImage: `url(${imageSrc})`, transform: `translateY(-${scrollPosition / 2}px)` }}>
-            {/* Inhalt der ParallaxImage-Komponente */}
+        <div className="parallax-image" style={{
+            backgroundImage: `url(${imageSrc})`,
+            transform: `translateY(-${scrollPosition / 2}px)` }}>
         </div>
     );
 }
