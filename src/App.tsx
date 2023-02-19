@@ -31,11 +31,6 @@ function App() {
                 <div>
                     <Header/>
                     <Routes>
-                        <Route path={"/"} element={<Home/>}/>
-                        <Route path={"/about"} element={<About/>}/>
-                        <Route path={"/my-journey"} element={<MyJourney/>}/>
-                        <Route path={"/blog"} element={<Blog projects={projects}/>}/>
-                        <Route path={"/contact"} element={<Contact/>}/>
                         <Route path="/blog/:id" element={<ProjectDetails blogPosts={projects}/>} />
                     </Routes>
                 </div>
