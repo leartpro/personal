@@ -39,7 +39,11 @@ function App() {
                         <Route path="/blog/:id" element={<ProjectDetails blogPosts={projects}/>} />
                     </Routes>
                 </div>
-
+                <Home/>
+                <About/>
+                <MyJourney/>
+                <Blog projects={projects}/>
+                <Contact/>
             </Router>
         </div>
     );
