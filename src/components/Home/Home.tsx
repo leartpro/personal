@@ -3,7 +3,7 @@ import ParallaxImage from './ParallaxImage';
 function Home() {
     return (
         <div id="home">
-            <ParallaxImage imageSrc="../../images/WalterWhite.png" />
+            <ParallaxImage imageSrc="/WalterWhite.png" />
         </div>
     );
 }
