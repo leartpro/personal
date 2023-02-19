@@ -1,6 +1,11 @@
 import axios from 'axios';
 import React, {useState} from "react";
-import {Box, FormControl, FormGroup, FormLabel, Grid, Input, InputLabel} from "@mui/material";
+import {Box, Button, FormControl, FormGroup, FormLabel, Grid, Input, InputLabel} from "@mui/material";
+import serverConfig from './serverConfig.json';
+
+const serverAddress = serverConfig.serverAddress;
+const serverPort = serverConfig.serverPort;
+
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -9,8 +14,8 @@ const Contact = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const data = { name, email, message };
-        axios.post('/submit-form', data)
+        const data = {name, email, message};
+        axios.post(`http://${serverAddress}:${serverPort}/submit-form`, data)
             .then(response => console.log(response))
             .catch(error => console.log(error));
         setName('');
@@ -20,66 +25,50 @@ const Contact = () => {
 
     //TODO: completely make use of rect components
     return (
-        <section id="contact">
-            <FormGroup>
-                <FormLabel>Get in touch</FormLabel>
-                <Box sx={{ width: '100%' }}>
-                <Grid container spacing={4} columnSpacing={{ xs: 1, sm: 2, md: 4 }}>
-                    <Grid item xs={6} md={8}>
-                        <FormControl>
-                            <InputLabel>Name</InputLabel>
-                            <Input></Input>
-                        </FormControl>
-                    </Grid>
-                    <Grid item xs={6} md={8}>
-                        <FormControl>
-                            <InputLabel>EMail</InputLabel>
-                            <Input></Input>
-                        </FormControl>
-                    </Grid>
-                    <Grid item xs={6} md={8}>
-                        <FormControl>
-                            <InputLabel>Content</InputLabel>
-                            <Input></Input>
-                        </FormControl>
-                    </Grid>
-                </Grid>
-                </Box>
-            </FormGroup>
-                <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <input
-                            type="text"
-                            placeholder="Your Name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
-                            type="email"
-                            placeholder="Your Email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-            <textarea
-                placeholder="Your Message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-            ></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
-                <div className="contact-links">
-                    <a href="mailto:your-email@example.com">your-email@example.com</a>
-                    <a href="https://github.com/your-username">GitHub</a>
-                    <a href="https://discord.com/your-username">Discord</a>
-                </div>
+        <section id="contact" style={{width: "100%"}}>
+            <form onSubmit={handleSubmit}>
+                <FormGroup>
+                    <FormLabel>Get in touch</FormLabel>
+                    <Box sx={{flexGrow: 1}}>
+                        <Grid container spacing={2} columnSpacing={{xs: 1, sm: 2, md: 4}}>
+                            <Grid item xs={4} md={8}>
+                                <FormControl>
+                                    <InputLabel>Name</InputLabel>
+                                    <Input
+                                        required
+                                        id="name"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                    />
+                                </FormControl>
+                            </Grid>
+                            <Grid item xs={4} md={8}>
+                                <FormControl>
+                                    <InputLabel>EMail</InputLabel>
+                                    <Input
+                                        required
+                                        id="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                </FormControl>
+                            </Grid>
+                            <Grid item xs={8} md={8}>
+                                <FormControl>
+                                    <InputLabel>Content</InputLabel>
+                                    <Input
+                                        required
+                                        id="content"
+                                        value={message}
+                                        onChange={(e) => setMessage(e.target.value)}
+                                    />
+                                </FormControl>
+                            </Grid>
+                            <Button type="submit">Send Message</Button>
+                        </Grid>
+                    </Box>
+                </FormGroup>
+            </form>
         </section>
     );
 }
