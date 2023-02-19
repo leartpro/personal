@@ -51,7 +51,7 @@
   {
     "id": 8,
     "title": "Projekt 8",
-    "image": "path/to/image2.jpg",
+    "image": "/images/projects/dummy.jpeg",
     "description": "Beschreibung von Projekt 8",
     "details": "Weitere Details über Projekt 8"
   }

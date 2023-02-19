@@ -1,21 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {Project} from "../../types/Project";
+import {IconButton,  ImageListItem, ImageListItemBar, ListSubheader} from "@material-ui/core";
+import ImageList from '@mui/material/ImageList';
 
+//TODO: only use @mui instead of @material-ui
 
-const Blog = ({ projects }: { projects: Project[] }) => {
+const Blog = ({projects}: { projects: Project[] }) => {
     return (
         <section id={"blog"}>
-            <div className="blog-grid">
-                {projects.map((project) => (
+            <ImageList variant="masonry" cols={3} gap={8}>
+                <ImageListItem key="Subheader" cols={2}>
+                    <ListSubheader component="div">Projects</ListSubheader>
+                </ImageListItem>
+                {projects.map((project: Project) => (
                     <Link to={`/project/${project.id}`} key={project.id}>
-                        <div className="blog-item">
-                            <img src={project.image} alt={project.title} />
-                            <div className="blog-item-title">{project.title}</div>
-                        </div>
+                        <ImageListItem key={project.image}>
+                            <img src={`${project.image}`} alt={project.title} loading="lazy"/>
+                            <ImageListItemBar
+                                title={project.title}
+                                subtitle={project.description}
+                                actionIcon={
+                                    <IconButton aria-label={`info about ${project.title}`}/>
+                                }
+                            />
+                        </ImageListItem>
                     </Link>
                 ))}
-            </div>
+            </ImageList>
         </section>
     );
 };
