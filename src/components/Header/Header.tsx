@@ -1,4 +1,15 @@
 import React from "react";
+import {
+    AppBar,
+    Toolbar,
+    Typography,
+    IconButton,
+    Box,
+    FormGroup,
+    FormControlLabel,
+    Switch,
+    MenuItem
+} from "@material-ui/core";
 
 function scrollToAnchor(event: React.MouseEvent, anchorId: string) {
     event.preventDefault();

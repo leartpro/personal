@@ -5,6 +5,7 @@ const About = () => {
     return (
         <div className="about-container">
             <h1>About Me</h1>
+            {/* eslint-disable-next-line react/jsx-no-undef */}
             <p>
                 Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit. Sed ac nulla vitae turpis lobortis convallis in vel leo.
