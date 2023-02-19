@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, {useState} from "react";
+import {Box, FormControl, FormGroup, FormLabel, Grid, Input, InputLabel} from "@mui/material";
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -17,10 +18,34 @@ const Contact = () => {
         setMessage('');
     }
 
+    //TODO: completely make use of rect components
     return (
         <section id="contact">
-            <div className="container">
-                <h2 className="section-heading">Get in Touch</h2>
+            <FormGroup>
+                <FormLabel>Get in touch</FormLabel>
+                <Box sx={{ width: '100%' }}>
+                <Grid container spacing={4} columnSpacing={{ xs: 1, sm: 2, md: 4 }}>
+                    <Grid item xs={6} md={8}>
+                        <FormControl>
+                            <InputLabel>Name</InputLabel>
+                            <Input></Input>
+                        </FormControl>
+                    </Grid>
+                    <Grid item xs={6} md={8}>
+                        <FormControl>
+                            <InputLabel>EMail</InputLabel>
+                            <Input></Input>
+                        </FormControl>
+                    </Grid>
+                    <Grid item xs={6} md={8}>
+                        <FormControl>
+                            <InputLabel>Content</InputLabel>
+                            <Input></Input>
+                        </FormControl>
+                    </Grid>
+                </Grid>
+                </Box>
+            </FormGroup>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <input
@@ -55,7 +80,6 @@ const Contact = () => {
                     <a href="https://github.com/your-username">GitHub</a>
                     <a href="https://discord.com/your-username">Discord</a>
                 </div>
-            </div>
         </section>
     );
 }
