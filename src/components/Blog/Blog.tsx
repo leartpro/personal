@@ -7,7 +7,7 @@ const Blog = ({ projects }: { projects: Project[] }) => {
         <div className="blog">
             <div className="blog-grid">
                 {projects.map((project) => (
-                    <Link to={`/projects/${project.id}`} key={project.id}>
+                    <Link to={`/blog/${project.id}`} key={project.id}>
                         <div className="blog-item">
                             <img src={project.image} alt={project.title} />
                             <div className="blog-item-title">{project.title}</div>

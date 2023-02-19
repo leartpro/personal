@@ -8,6 +8,7 @@ import Blog from "./components/Blog/Blog";
 import Contact from "./components/Contact/Contact";
 import MyJourney from "./components/MyJourney/MyJourney";
 import {Project} from "./types/Project";
+import ProjectDetails from "./components/Blog/ProjectDetails";
 
 function App() {
     const [projects, setProjects] = useState<Project[]>([]);
@@ -35,6 +36,7 @@ function App() {
                         <Route path={"/my-journey"} element={<MyJourney/>}/>
                         <Route path={"/blog"} element={<Blog projects={projects}/>}/>
                         <Route path={"/contact"} element={<Contact/>}/>
+                        <Route path="/blog/:id" element={<ProjectDetails blogPosts={projects}/>} />
                     </Routes>
                 </div>
 
