@@ -8,7 +8,9 @@ import Blog from "./components/Blog/Blog";
 import Contact from "./components/Contact/Contact";
 import MyJourney from "./components/MyJourney/MyJourney";
 import {Project} from "./types/Project";
-import ProjectDetails from "./components/Blog/ProjectDetails";
+import ProjectDetailsPage from "./pages/ProjectDetailsPage";
+import {Parallax} from "react-parallax";
+import HomePage from "./pages/HomePage";
 
 function App() {
     const [projects, setProjects] = useState<Project[]>([]);
@@ -31,14 +33,10 @@ function App() {
                 <div>
                     <Header/>
                     <Routes>
-                        <Route path="/blog/:id" element={<ProjectDetails blogPosts={projects}/>} />
+                        <Route path="/" element={<HomePage projects={projects}/>}/>
+                        <Route path="/blog/:id" element={<ProjectDetailsPage blogPosts={projects}/>} />
                     </Routes>
                 </div>
-                <Home/>
-                <About/>
-                <MyJourney/>
-                <Blog projects={projects}/>
-                <Contact/>
             </Router>
         </div>
     );

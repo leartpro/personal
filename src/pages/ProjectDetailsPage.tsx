@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
-import {Project} from "../../types/Project";
+import {Project} from "../types/Project";
+import React from "react";
 
-const ProjectDetails = (props: { blogPosts: Project[]; }) => {
+const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     const { id } = useParams<{ id?: string }>();
     const parsedId = id ? +id : undefined;
     const post = props.blogPosts.find((post) => post.id === parsedId);
@@ -19,4 +20,4 @@ const ProjectDetails = (props: { blogPosts: Project[]; }) => {
     );
 }
 
-export default ProjectDetails;
+export default ProjectDetailsPage;

@@ -21,23 +21,23 @@ function Header() {
         <AppBar>
             <Toolbar>
                 <Typography>{navText}</Typography>
-                <IconButton href="#home" onClick={(event) => {
+                <IconButton href="/" onClick={(event) => {
                     scrollToAnchor(event, "home");
                     updateNavText("Home");
                 }}>Home</IconButton>
-                <IconButton href="#about" onClick={(event) => {
+                <IconButton href="/#about" onClick={(event) => {
                     scrollToAnchor(event, "about");
                     updateNavText("About");
                 }}>About</IconButton>
-                <IconButton href="#my-journey" onClick={(event) => {
+                <IconButton href="/#my-journey" onClick={(event) => {
                     scrollToAnchor(event, "my-journey");
                     updateNavText("My Journey");
                 }}>My Journey</IconButton>
-                <IconButton href="#blog" onClick={(event) => {
+                <IconButton href="/#blog" onClick={(event) => {
                     scrollToAnchor(event, "blog");
                     updateNavText("Blog");
                 }}>Blog</IconButton>
-                <IconButton href="#contact" onClick={(event) => {
+                <IconButton href="/#contact" onClick={(event) => {
                     scrollToAnchor(event, "contact");
                     updateNavText("Contact");
                 }}>Contact</IconButton>

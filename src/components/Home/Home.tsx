@@ -1,13 +1,14 @@
-import Parallax, { Layer } from "react-parallax-scroll";
-
+import React from 'react';
+import { Parallax } from "react-parallax";
 
 function Home() {
     return (
-        <Parallax>
-            <Layer settings={{ speed: 0.45 }}>
-                <img src={"/WalterWhite.png"}/>
-            </Layer>
-        </Parallax>
+        <Parallax
+            blur={5}
+            bgImage={"./WalterWhite.png"}
+            bgImageAlt="Heisenberg"
+            strength={200}
+            style={{ height: '500px'}}/>
     );
 }
 
