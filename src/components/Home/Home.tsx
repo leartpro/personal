@@ -5,11 +5,12 @@ function Home() {
     return (
         <section id={"home"}>
             <Parallax
-                blur={5}
-                bgImage={"./WalterWhite.png"}
-                bgImageAlt="Heisenberg"
-                strength={200}
-                style={{ height: '500px'}}/>
+                blur={0}
+                bgImage={"./images/portrait.png"}
+                bgImageAlt="It's Me"
+                strength={300}
+                style={{ height: '700px', width: '700px', left: '50%', top: '50px',
+                    transform: 'translate(-50%, 0%)'}}/>
         </section>
 
     );
