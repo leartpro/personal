@@ -3,7 +3,7 @@ import '../../styles/About.css';
 
 const About = () => {
     return (
-        <div className="about-container">
+        <section id={"about"}>
             <h1>About Me</h1>
             {/* eslint-disable-next-line react/jsx-no-undef */}
             <p>
@@ -15,7 +15,7 @@ const About = () => {
             <div className="animated-div">
                 <h2>I am a developer</h2>
             </div>
-        </div>
+        </section>
     );
 }
 

@@ -3,7 +3,7 @@ const { Gitgraph } = require("@gitgraph/react");
 
 const MyJourney = () => {
     return (
-        <div>
+        <section id={"my-journey"}>
             <h1>MyJourney</h1>
             <Gitgraph>
                 {(gitgraph : any) => {
@@ -26,7 +26,7 @@ const MyJourney = () => {
                     master.merge(develop).tag("v1.0.0");
                 }}
             </Gitgraph>
-        </div>
+        </section>
     );
 }
 

@@ -34,7 +34,7 @@ function App() {
                     <Header/>
                     <Routes>
                         <Route path="/" element={<HomePage projects={projects}/>}/>
-                        <Route path="/blog/:id" element={<ProjectDetailsPage blogPosts={projects}/>} />
+                        <Route path="project/:id" element={<ProjectDetailsPage blogPosts={projects}/>} />
                     </Routes>
                 </div>
             </Router>
