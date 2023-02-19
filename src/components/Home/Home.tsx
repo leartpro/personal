@@ -1,10 +1,13 @@
-import ParallaxImage from './ParallaxImage';
+import Parallax, { Layer } from "react-parallax-scroll";
+
 
 function Home() {
     return (
-        <div id="home">
-            <ParallaxImage imageSrc="/WalterWhite.png" />
-        </div>
+        <Parallax>
+            <Layer settings={{ speed: 0.45 }}>
+                <img src={"/WalterWhite.png"}/>
+            </Layer>
+        </Parallax>
     );
 }
 
