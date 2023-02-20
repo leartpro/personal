@@ -27,7 +27,7 @@ const Contact = () => {
         <section id="contact">
             <h1>Contact</h1>
             <form onSubmit={handleSubmit}>
-                <FormGroup>
+                <FormGroup> //TODO: this form can not use display: flex
                     <FormLabel>Get in touch</FormLabel>
                     <div>
                         <Grid container spacing={12}>

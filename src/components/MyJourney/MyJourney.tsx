@@ -1,5 +1,5 @@
 import React from 'react';
-import JourneyGraph from "../Contact/JourneyGraph";
+import JourneyGraph from "./JourneyGraph";
 
 //TODO: Warning: validateDOMNesting(...): <p> cannot appear as a descendant of <p>.
 const MyJourney = () => {
