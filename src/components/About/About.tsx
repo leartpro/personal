@@ -16,25 +16,24 @@ const About = () => {
     return (
         <section id="about">
             <h1>About Me</h1>
-            <Typography style={{ wordWrap: 'break-word'}}>
-                {text.split(' ').map((word, index) => {
-                    const emphasized = emphasizedWords.includes(word.toLowerCase());
-                    return (
-                        <span
-                            key={index}
-                            style={{
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                color: emphasized ? '#2e7d32' : 'inherit',
-                                fontWeight: emphasized ? 'bold' : 'normal',
-                                textDecoration: emphasized ? 'underline' : 'none',
-                                textUnderlineOffset: emphasized ? '2px' : 'none',
-                            }}
-                        >
-              {word}{'\u00A0'}
-            </span>
-                    );
-                })}
+            <Typography style={{wordWrap: 'break-word'}}>
+                    {
+                        text.split(' ').map((word, index) => {
+                            const emphasized = emphasizedWords.includes(word.toLowerCase());
+                            return (
+                                <span
+                                    key={index}
+                                    style={{
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        color: emphasized ? '#2e7d32' : 'inherit',
+                                        fontWeight: emphasized ? 'bold' : 'normal',
+                                        textDecoration: emphasized ? 'underline' : 'none',
+                                        textUnderlineOffset: emphasized ? '2px' : 'none',
+                                    }}> {word}{'\u00A0'} </span>
+                            );
+                        })
+                    }
             </Typography>
         </section>
     );
