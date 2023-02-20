@@ -10,7 +10,8 @@ function Home() {
                 bgImageAlt="It's Me"
                 strength={300}
                 style={{ height: '700px', width: '700px', left: '50%', top: '50px',
-                    transform: 'translate(-50%, 0%)'}}/>
+                    transform: 'translate(-50%, 0%)'}}
+            />
         </section>
 
     );

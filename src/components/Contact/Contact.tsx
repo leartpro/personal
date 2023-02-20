@@ -15,7 +15,7 @@ const Contact = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = {name, email, message};
-        axios.post(`http://${serverAddress}:${serverPort}/submit-form`, data)
+        axios.post(`http://${serverAddress}:${serverPort}/contact`, data)
             .then(response => console.log(response))
             .catch(error => console.log(error));
         setName('');
@@ -55,10 +55,10 @@ const Contact = () => {
                             </Grid>
                             <Grid item xs={8} md={8}>
                                 <FormControl>
-                                    <InputLabel>Content</InputLabel>
+                                    <InputLabel>Message</InputLabel>
                                     <Input
                                         required
-                                        id="content"
+                                        id="message"
                                         value={message}
                                         onChange={(e) => setMessage(e.target.value)}
                                     />
