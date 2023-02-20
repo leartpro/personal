@@ -3,56 +3,56 @@
     "id": 1,
     "title": "TicTacToe",
     "image": "/images/projects/dummy.jpeg",
-    "description": "Beschreibung von Projekt 1",
-    "details": "Weitere Details über Projekt 1"
+    "description": "A TicTacToe CLI/GUI game, written in pure Java",
+    "content": "Weitere Details über Projekt 1"
   },
   {
     "id": 2,
     "title": "Quap",
     "image": "/images/projects/dummy.jpeg",
-    "description": "Beschreibung von Projekt 2",
-    "details": "Weitere Details über Projekt 2"
+    "description": "Implementation of an exemplary network application to my term paper",
+    "content": "Weitere Details über Projekt 2"
   },
   {
     "id": 3,
     "title": "Sudoku",
     "image": "/images/projects/dummy.jpeg",
-    "description": "Beschreibung von Projekt 3",
-    "details": "Weitere Details über Projekt 3"
+    "description": "A Sudoku CLI game, written in pure Java",
+    "content": "Weitere Details über Projekt 3"
   },
   {
     "id": 4,
     "title": "littSQL",
     "image": "/images/projects/dummy.jpeg",
-    "description": "Beschreibung von Projekt 4",
-    "details": "Weitere Details über Projekt 4"
+    "description": "An interactive learning platform for learning SQL",
+    "content": "Weitere Details über Projekt 4"
   },
   {
     "id": 5,
     "title": "chess4player",
     "image": "/images/projects/dummy.jpeg",
-    "description": "Beschreibung von Projekt 5",
-    "details": "Weitere Details über Projekt 5"
+    "description": "A chess app, for four players chess",
+    "content": "Weitere Details über Projekt 5"
   },
   {
     "id": 6,
     "title": "planck",
     "image": "/images/projects/dummy.jpeg",
-    "description": "Beschreibung von Projekt 6",
-    "details": "Weitere Details über Projekt 6"
+    "description": "An own lightweight programming language",
+    "content": "Weitere Details über Projekt 6"
   },
   {
     "id": 7,
     "title": "bwinf41.1",
     "image": "/images/projects/dummy.jpeg",
-    "description": "Beschreibung von Projekt 7",
-    "details": "Weitere Details über Projekt 7"
+    "description": "Participation in the German National Computer Science Competition Round One",
+    "content": "Weitere Details über Projekt 7"
   },
   {
     "id": 8,
     "title": "bwinf41.2",
     "image": "/images/projects/dummy.jpeg",
-    "description": "Beschreibung von Projekt 8",
-    "details": "Weitere Details über Projekt 8"
+    "description": "Participation in the German National Computer Science Competition Round Two",
+    "content": "Weitere Details über Projekt 8"
   }
 ]
