@@ -2,21 +2,21 @@
   {
     "id": 1,
     "title": "TicTacToe",
-    "image": "/images/projects/dummy.jpeg",
+    "image": "/images/projects/tictactoe.png",
     "description": "A TicTacToe CLI/GUI game, written in pure Java",
     "content": "Weitere Details über Projekt 1"
   },
   {
     "id": 2,
     "title": "Quap",
-    "image": "/images/projects/dummy.jpeg",
+    "image": "/images/projects/quap.jpg",
     "description": "Implementation of an exemplary network application to my term paper",
     "content": "Weitere Details über Projekt 2"
   },
   {
     "id": 3,
     "title": "Sudoku",
-    "image": "/images/projects/dummy.jpeg",
+    "image": "/images/projects/sudoku.png",
     "description": "A Sudoku CLI game, written in pure Java",
     "content": "Weitere Details über Projekt 3"
   },
@@ -44,14 +44,14 @@
   {
     "id": 7,
     "title": "bwinf41.1",
-    "image": "/images/projects/dummy.jpeg",
+    "image": "/images/projects/bwinf41.jpg",
     "description": "Participation in the German National Computer Science Competition Round One",
     "content": "Weitere Details über Projekt 7"
   },
   {
     "id": 8,
     "title": "bwinf41.2",
-    "image": "/images/projects/dummy.jpeg",
+    "image": "/images/projects/bwinf41.jpg",
     "description": "Participation in the German National Computer Science Competition Round Two",
     "content": "Weitere Details über Projekt 8"
   }
