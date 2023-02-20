@@ -29,9 +29,9 @@ const Contact = () => {
             <form onSubmit={handleSubmit}>
                 <FormGroup>
                     <FormLabel>Get in touch</FormLabel>
-                    <Box>
-                        <Grid>
-                            <Grid>
+                    <div>
+                        <Grid container spacing={12}>
+                            <Grid item xs={2}>
                                 <FormControl>
                                     <InputLabel>Name</InputLabel>
                                     <Input
@@ -42,7 +42,7 @@ const Contact = () => {
                                     />
                                 </FormControl>
                             </Grid>
-                            <Grid>
+                            <Grid item xs={2}>
                                 <FormControl>
                                     <InputLabel>EMail</InputLabel>
                                     <Input
@@ -66,7 +66,7 @@ const Contact = () => {
                             </FormControl>
                             <Button type="submit">Send Message</Button>
                         </Grid>
-                    </Box>
+                    </div>
                 </FormGroup>
             </form>
         </section>
