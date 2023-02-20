@@ -23,21 +23,21 @@
   {
     "id": 4,
     "title": "littSQL",
-    "image": "/images/projects/dummy.jpeg",
+    "image": "/images/projects/littSQL.ico",
     "description": "An interactive learning platform for learning SQL",
     "content": "Weitere Details über Projekt 4"
   },
   {
     "id": 5,
     "title": "chess4player",
-    "image": "/images/projects/dummy.jpeg",
+    "image": "/images/projects/chess4player.png",
     "description": "A chess app, for four players chess",
     "content": "Weitere Details über Projekt 5"
   },
   {
     "id": 6,
     "title": "planck",
-    "image": "/images/projects/dummy.jpeg",
+    "image": "/images/projects/planck.jpg",
     "description": "An own lightweight programming language",
     "content": "Weitere Details über Projekt 6"
   },
