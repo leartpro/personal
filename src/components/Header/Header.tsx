@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {AppBar, IconButton, Toolbar, Typography} from "@material-ui/core";
+import {AppBar, IconButton, Toolbar, Typography} from "@mui/material";
 
 
 function scrollToAnchor(event: React.MouseEvent, anchorId: string) {
@@ -21,23 +21,23 @@ function Header() {
         <AppBar>
             <Toolbar>
                 <Typography>{navText}</Typography>
-                <IconButton href="/" onClick={(event) => {
+                <IconButton href="#home" onClick={(event) => {
                     scrollToAnchor(event, "home");
                     updateNavText("Home");
                 }}>Home</IconButton>
-                <IconButton href="/" onClick={(event) => {
+                <IconButton href="#about" onClick={(event) => {
                     scrollToAnchor(event, "about");
                     updateNavText("About");
                 }}>About</IconButton>
-                <IconButton href="/" onClick={(event) => {
+                <IconButton href="#my-journey" onClick={(event) => {
                     scrollToAnchor(event, "my-journey");
                     updateNavText("My Journey");
                 }}>My Journey</IconButton>
-                <IconButton href="/" onClick={(event) => {
+                <IconButton href="#blog" onClick={(event) => {
                     scrollToAnchor(event, "blog");
                     updateNavText("Blog");
                 }}>Blog</IconButton>
-                <IconButton href="/" onClick={(event) => {
+                <IconButton href="#contact" onClick={(event) => {
                     scrollToAnchor(event, "contact");
                     updateNavText("Contact");
                 }}>Contact</IconButton>

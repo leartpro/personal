@@ -1,8 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {Project} from "../../types/Project";
-import {IconButton,  ImageListItem, ImageListItemBar, ListSubheader} from "@material-ui/core";
 import ImageList from '@mui/material/ImageList';
+import {IconButton, ImageListItem, ImageListItemBar, ListSubheader} from "@mui/material";
 
 //TODO: only use @mui instead of @material-ui
 

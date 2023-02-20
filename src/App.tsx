@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import './styles/App.css';
-import Header from "./components/Header/Header";
 import {Project} from "./types/Project";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import HomePage from "./pages/HomePage";
@@ -25,7 +23,6 @@ function App() {
         <div className="app">
             <Router>
                 <div>
-                    <Header/>
                     <Routes>
                         <Route path="/" element={<HomePage projects={projects}/>}/>
                         <Route path="project/:id" element={<ProjectDetailsPage blogPosts={projects}/>} />

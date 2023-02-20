@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
@@ -8,9 +8,9 @@
     ],
     "sourceMap": true,
     "types": [
+      "node",
       "react",
       "react-dom",
-      "react-parallax-scroll"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -28,8 +28,5 @@
   },
   "include": [
     "src",
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }
