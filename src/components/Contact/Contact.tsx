@@ -23,15 +23,15 @@ const Contact = () => {
         setMessage('');
     }
 
-    //TODO: completely make use of rect components
     return (
-        <section id="contact" style={{width: "100%"}}>
+        <section id="contact">
+            <h1>Contact</h1>
             <form onSubmit={handleSubmit}>
                 <FormGroup>
                     <FormLabel>Get in touch</FormLabel>
-                    <Box sx={{flexGrow: 1}}>
-                        <Grid container spacing={2} columnSpacing={{xs: 1, sm: 2, md: 4}}>
-                            <Grid item xs={4} md={8}>
+                    <Box>
+                        <Grid>
+                            <Grid>
                                 <FormControl>
                                     <InputLabel>Name</InputLabel>
                                     <Input
@@ -42,7 +42,7 @@ const Contact = () => {
                                     />
                                 </FormControl>
                             </Grid>
-                            <Grid item xs={4} md={8}>
+                            <Grid>
                                 <FormControl>
                                     <InputLabel>EMail</InputLabel>
                                     <Input
@@ -53,17 +53,17 @@ const Contact = () => {
                                     />
                                 </FormControl>
                             </Grid>
-                            <Grid item xs={8} md={8}>
-                                <FormControl>
-                                    <InputLabel>Message</InputLabel>
-                                    <Input
-                                        required
-                                        id="message"
-                                        value={message}
-                                        onChange={(e) => setMessage(e.target.value)}
-                                    />
-                                </FormControl>
-                            </Grid>
+                        </Grid>
+                        <Grid>
+                            <FormControl>
+                                <InputLabel>Message</InputLabel>
+                                <Input
+                                    required
+                                    id="message"
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                />
+                            </FormControl>
                             <Button type="submit">Send Message</Button>
                         </Grid>
                     </Box>

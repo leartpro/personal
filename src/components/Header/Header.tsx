@@ -19,8 +19,8 @@ function Header() {
 
     return (
         <AppBar>
-            <Toolbar>
-                <Typography>{navText}</Typography>
+            <Typography>{navText}</Typography>
+            <Toolbar style={{alignItems: 'flex-end', justifyContent: 'flex-end'}}>
                 <IconButton href="#home" onClick={(event) => {
                     scrollToAnchor(event, "home");
                     updateNavText("Home");
