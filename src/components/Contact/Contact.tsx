@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useState} from "react";
-import {Box, Button, FormControl, FormGroup, FormLabel, Grid, Input, InputLabel} from "@mui/material";
+import {Button, FormControl, FormGroup, FormLabel, Grid, Input, InputLabel} from "@mui/material";
 import serverConfig from './serverConfig.json';
 
 const serverAddress = serverConfig.serverAddress;
@@ -23,11 +23,12 @@ const Contact = () => {
         setMessage('');
     }
 
+    //TODO: this form can not use display: flex
     return (
         <section id="contact">
             <h1>Contact</h1>
             <form onSubmit={handleSubmit}>
-                <FormGroup> //TODO: this form can not use display: flex
+                <FormGroup>
                     <FormLabel>Get in touch</FormLabel>
                     <div>
                         <Grid container spacing={12}>

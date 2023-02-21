@@ -2,43 +2,99 @@ import React from 'react';
 import {Gitgraph, Orientation, templateExtend, TemplateName} from "@gitgraph/react";
 
 function JourneyGraph() {
+
+    var customTagStyle = {
+        bgColor: 'orange',
+        strokeColor: 'orange',
+    };
+
     let options = {
+        //mode: Mode.Compact,
         orientation: Orientation.VerticalReverse,
         template: templateExtend("metro" as TemplateName, {
-            //colors: ["gray", "blue", "turquoise", "darkgreen", "yellowgreen", "navy"],
+            colors: ["gray", "green", "gold", "dodgerblue", "steelblue", "slateblue", "blueviolet", "darkmagenta", "darkslateblue", "navy"],
+            branch: {
+                label: {
+                    display: false,
+                },
+            },
             commit: {
                 message: {
                     displayAuthor: false,
                     displayHash: false
                 }
-            }
+            },
         })
     };
 
     return (
             <Gitgraph options={options}>
                 {gitgraph => {
-                    const master = gitgraph.branch("master").commit("Init project");
-                    master.commit("create F1 and F2");
-                    let feat1 = gitgraph.branch("F1");
-                    let feat2 = gitgraph.branch("F2");
-                    feat1.commit("1");
-                    feat2.commit("2");
-                    master.commit("create RC1");
-                    let release1 = gitgraph.branch("RC1");
-                    release1.commit("3");
-                    master.commit("create RC2");
-                    let release2 = gitgraph.branch("RC2");
-                    release2.commit("4");
-                    master.commit("create F3");
-                    let feat3 = gitgraph.branch("F3");
-                    feat3.commit("5");
-                    release1.merge(feat1).merge(feat2);
-                    release2.merge(feat3);
-                    master.merge(release1);
-                    release2.merge(master);
-                    master.merge(release2);
-                    master.commit("6");
+                    const master = gitgraph.branch("master");
+                    master.commit("");
+                    let release = gitgraph.branch("release").commit("");
+                    let develop = gitgraph.branch("develop").commit("");
+                    gitgraph.tag({
+                        name: 'TicTacToe:',
+                        style: customTagStyle,
+                    });
+                    let tictactoe = gitgraph.branch("tictactoe");
+                    tictactoe.commit("skill learned in tictactoe");
+                    develop.merge(tictactoe);
+                    gitgraph.tag({
+                        name: 'Quap:',
+                        style: customTagStyle,
+                    });
+                    let quap = gitgraph.branch("quap");
+                    quap.commit("skill learned in quap");
+                    develop.merge(quap);
+                    gitgraph.tag({
+                        name: 'littSQL:',
+                        style: customTagStyle,
+                    });
+                    let littSQL = gitgraph.branch("littSQL");
+                    littSQL.commit("skill learned in littSQL");
+                    develop.merge(littSQL);
+                    gitgraph.tag({
+                        name: 'Sudoku:',
+                        style: customTagStyle,
+                    });
+                    let sudoku = gitgraph.branch("sudoku");
+                    sudoku.commit("skill learned in sudoku");
+                    develop.merge(sudoku);
+                    gitgraph.tag({
+                        name: 'Bwinf 41.1:',
+                        style: customTagStyle,
+                    });
+                    let bwinf411 = gitgraph.branch("bwinf 41.1");
+                    bwinf411.commit("skill learned in bwinf 41.1");
+                    develop.merge(bwinf411);
+                    gitgraph.tag({
+                        name: 'Chess4Player:',
+                        style: customTagStyle,
+                    });
+                    let chess4player = gitgraph.branch({
+                        name: "chess4player",
+                        from: develop,
+                    });
+                    chess4player.commit("skill learned in chess4player");
+                    develop.merge(chess4player);
+                    gitgraph.tag({
+                        name: 'Bwinf 41.2:',
+                        style: customTagStyle,
+                    });
+                    let bwinf412 = gitgraph.branch("bwinf 41.2");
+                    bwinf412.commit("skill learned in bwinf 41.2");
+                    release.commit("");
+                    master.commit("");
+                    develop.commit("");
+                    tictactoe.commit("");
+                    quap.commit("");
+                    littSQL.commit("");
+                    sudoku.commit("");
+                    bwinf411.commit("");
+                    bwinf412.commit("");
+
                 }}
             </Gitgraph>
     );
