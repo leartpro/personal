@@ -23,10 +23,9 @@ const Contact = () => {
         setMessage('');
     }
 
-    //TODO: this form can not use display: flex
     return (
         <section id="contact">
-            <h1 style={{marginLeft: '50%', marginRight: '50%'}}>Contact</h1>
+            <h1>Contact</h1>
             <form onSubmit={handleSubmit}>
                 <FormGroup style={{marginLeft: '35%', marginRight: '35%', marginBottom: '8px'}}>
                     <FormLabel style={{marginBottom: '8px'}}>Get in touch</FormLabel>
