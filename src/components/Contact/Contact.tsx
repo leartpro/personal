@@ -28,8 +28,10 @@ const Contact = () => {
         <section id="contact">
             <h1 style={{marginLeft: '50%', marginRight: '50%'}}>Contact</h1>
             <form onSubmit={handleSubmit}>
-                <FormGroup style={{marginLeft: '40%', marginRight: '40%'}}>
-                    <FormLabel>Get in touch</FormLabel>
+                <FormGroup style={{marginLeft: '35%', marginRight: '35%', marginBottom: '8px'}}>
+                    <FormLabel style={{marginBottom: '8px'}}>Get in touch</FormLabel>
+                        <Grid container spacing={8} style={{marginBottom: '8px'}}>
+                            <Grid item xs={6}>
                                 <FormControl>
                                     <InputLabel>Name</InputLabel>
                                     <Input
@@ -39,6 +41,8 @@ const Contact = () => {
                                         onChange={(e) => setName(e.target.value)}
                                     />
                                 </FormControl>
+                            </Grid>
+                            <Grid item xs={6}>
                                 <FormControl>
                                     <InputLabel>EMail</InputLabel>
                                     <Input
@@ -48,7 +52,9 @@ const Contact = () => {
                                         onChange={(e) => setEmail(e.target.value)}
                                     />
                                 </FormControl>
-                            <FormControl>
+                            </Grid>
+                        </Grid>
+                            <FormControl style={{marginBottom: '8px'}}>
                                 <InputLabel>Message</InputLabel>
                                 <Input
                                     required
@@ -57,7 +63,7 @@ const Contact = () => {
                                     onChange={(e) => setMessage(e.target.value)}
                                 />
                             </FormControl>
-                            <Button type="submit">Send Message</Button>
+                            <Button type="submit" style={{marginLeft: '35%', marginRight: '35%'}}>Send Message</Button>
                 </FormGroup>
             </form>
         </section>
