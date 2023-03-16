@@ -26,13 +26,10 @@ const Contact = () => {
     //TODO: this form can not use display: flex
     return (
         <section id="contact">
-            <h1>Contact</h1>
+            <h1 style={{marginLeft: '50%', marginRight: '50%'}}>Contact</h1>
             <form onSubmit={handleSubmit}>
-                <FormGroup>
+                <FormGroup style={{marginLeft: '40%', marginRight: '40%'}}>
                     <FormLabel>Get in touch</FormLabel>
-                    <div>
-                        <Grid container spacing={12}>
-                            <Grid item xs={2}>
                                 <FormControl>
                                     <InputLabel>Name</InputLabel>
                                     <Input
@@ -42,8 +39,6 @@ const Contact = () => {
                                         onChange={(e) => setName(e.target.value)}
                                     />
                                 </FormControl>
-                            </Grid>
-                            <Grid item xs={2}>
                                 <FormControl>
                                     <InputLabel>EMail</InputLabel>
                                     <Input
@@ -53,9 +48,6 @@ const Contact = () => {
                                         onChange={(e) => setEmail(e.target.value)}
                                     />
                                 </FormControl>
-                            </Grid>
-                        </Grid>
-                        <Grid>
                             <FormControl>
                                 <InputLabel>Message</InputLabel>
                                 <Input
@@ -66,8 +58,6 @@ const Contact = () => {
                                 />
                             </FormControl>
                             <Button type="submit">Send Message</Button>
-                        </Grid>
-                    </div>
                 </FormGroup>
             </form>
         </section>

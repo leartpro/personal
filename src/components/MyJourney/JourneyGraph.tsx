@@ -65,71 +65,71 @@ function JourneyGraph() {
                     let quap = gitgraph.branch({name: 'quap', from: develop,}).commit("");
                     gitgraph.tag({name: 'Quap:', style: getCustomHeaderStyle(1),});
                     quap.commit("").tag({name: 'Technologies:  ', style: getCustomSubHeaderStyle(1)});
-                    quap.commit("Git, Java, JavaFx, FXML, JUnit, SQLite, Maven");
+                    quap.commit("Git, Java, JavaFx, FXML, JUnit, SCSS, JSON, SQLite, Postgres, Maven");
                     quap.commit("").tag({name: 'Tools:  ', style: getCustomSubHeaderStyle(1)});
-                    quap.commit("Github, Intellij, SceneBuilder, Git CLI")
+                    quap.commit("Github, Intellij, SceneBuilder, Git CLI, Datagrip")
                     quap.commit("").tag({name: 'Skills:  ', style: getCustomSubHeaderStyle(1)});
-                    quap.commit("cooperative programming, Gitflow, GUI, multi modules project");
+                    quap.commit("network technology, software design, database, socket programming, multithreading");
                     develop.merge({branch: quap, commitOptions: {subject: ' ',},});
 
                     let littSQL = gitgraph.branch({name: 'littSQL', from: develop,}).commit("");
                     gitgraph.tag({name: 'littSQL:', style: getCustomHeaderStyle(2),});
                     littSQL.commit("").tag({name: 'Technologies:   ', style: getCustomSubHeaderStyle(2)});
-                    littSQL.commit("Git, Java, JavaFx, FXML, JUnit, SQLite, Maven");
+                    littSQL.commit("Svelte, vue, Carbon Design System, golang, Postgres, SCSS, Typescript, Git");
                     littSQL.commit("").tag({name: 'Tools:   ', style: getCustomSubHeaderStyle(2)});
-                    littSQL.commit("Github, Intellij, SceneBuilder, Git CLI")
+                    littSQL.commit("Webstorm, Datagrip, Goland, Figma, Miro, Postman, Github")
                     littSQL.commit("").tag({name: 'Skills:   ', style: getCustomSubHeaderStyle(2)});
-                    littSQL.commit("cooperative programming, Gitflow, GUI, multi modules project");
+                    littSQL.commit("frontend, design, cooperative programming");
                     develop.merge({branch: littSQL, commitOptions: {subject: ' ',},});
 
                     let sudoku = gitgraph.branch({name: 'sudoku', from: develop,}).commit("");
                     gitgraph.tag({name: 'Sudoku:', style: getCustomHeaderStyle(3),});
                     sudoku.commit("").tag({name: 'Technologies:    ', style: getCustomSubHeaderStyle(3)});
-                    sudoku.commit("Git, Java, JavaFx, FXML, JUnit, SQLite, Maven");
+                    sudoku.commit("Java, Git, Maven");
                     sudoku.commit("").tag({name: 'Tools:    ', style: getCustomSubHeaderStyle(3)});
-                    sudoku.commit("Github, Intellij, SceneBuilder, Git CLI")
+                    sudoku.commit("Github, Intellij")
                     sudoku.commit("").tag({name: 'Skills:    ', style: getCustomSubHeaderStyle(3)});
-                    sudoku.commit("cooperative programming, Gitflow, GUI, multi modules project");
+                    sudoku.commit("theoretical computer science, recursion algorithmic");
                     develop.merge({branch: sudoku, commitOptions: {subject: ' ',},});
 
                     let bwinf411 = gitgraph.branch({name: 'bwinf411', from: develop,}).commit("");
                     gitgraph.tag({name: 'BWINF 41.1:', style: getCustomHeaderStyle(4),});
                     bwinf411.commit("").tag({name: 'Technologies:     ', style: getCustomSubHeaderStyle(4)});
-                    bwinf411.commit("Git, Java, JavaFx, FXML, JUnit, SQLite, Maven");
+                    bwinf411.commit("Java, Git, Latex");
                     bwinf411.commit("").tag({name: 'Tools:     ', style: getCustomSubHeaderStyle(4)});
-                    bwinf411.commit("Github, Intellij, SceneBuilder, Git CLI")
+                    bwinf411.commit("Github, Intellij, Texmaker")
                     bwinf411.commit("").tag({name: 'Skills:     ', style: getCustomSubHeaderStyle(4)});
-                    bwinf411.commit("cooperative programming, Gitflow, GUI, multi modules project");
+                    bwinf411.commit("algorithm solution, writing latex documents");
                     develop.merge({branch: bwinf411, commitOptions: {subject: ' ',},});
 
                     let chess4player = gitgraph.branch({name: 'chess4player', from: develop,}).commit("");
                     gitgraph.tag({name: 'Chess4Player:', style: getCustomHeaderStyle(5),});
                     chess4player.commit("").tag({name: 'Technologies:      ', style: getCustomSubHeaderStyle(5)});
-                    chess4player.commit("Git, Java, JavaFx, FXML, JUnit, SQLite, Maven");
+                    chess4player.commit("Golang, Flutter, Dart, Git");
                     chess4player.commit("").tag({name: 'Tools:      ', style: getCustomSubHeaderStyle(5)});
-                    chess4player.commit("Github, Intellij, SceneBuilder, Git CLI")
+                    chess4player.commit("Goland, Android Studio")
                     chess4player.commit("").tag({name: 'Skills:      ', style: getCustomSubHeaderStyle(5)});
-                    chess4player.commit("cooperative programming, Gitflow, GUI, multi modules project");
+                    chess4player.commit("cooperative programming, parallel programming, websockets");
                     develop.merge({branch: chess4player, commitOptions: {subject: ' ',},});
 
                     let bwinf412 = gitgraph.branch({name: 'bwinf412', from: develop,}).commit("");
                     gitgraph.tag({name: 'BWINF 41.2:', style: getCustomHeaderStyle(6),});
                     bwinf412.commit("").tag({name: 'Technologies:       ', style: getCustomSubHeaderStyle(6)});
-                    bwinf412.commit("Git, Java, JavaFx, FXML, JUnit, SQLite, Maven");
+                    bwinf412.commit("C++, Git, Latex");
                     bwinf412.commit("").tag({name: 'Tools:       ', style: getCustomSubHeaderStyle(6)});
-                    bwinf412.commit("Github, Intellij, SceneBuilder, Git CLI")
+                    bwinf412.commit("Clion, Github, Texmaker")
                     bwinf412.commit("").tag({name: 'Skills:       ', style: getCustomSubHeaderStyle(6)});
-                    bwinf412.commit("cooperative programming, Gitflow, GUI, multi modules project");
+                    bwinf412.commit("advanced tsp-/knapsack-problem solver, theoretical computer science");
                     develop.merge({branch: bwinf412, commitOptions: {subject: ' ',},});
 
                     let humanAndMachine = gitgraph.branch({name: 'humanAndMachine', from: develop,}).commit("");
                     gitgraph.tag({name: 'Human & Machine:', style: getCustomHeaderStyle(7),});
                     humanAndMachine.commit("").tag({name: 'Technologies:        ', style: getCustomSubHeaderStyle(7)});
-                    humanAndMachine.commit("Git, Java, JavaFx, FXML, JUnit, SQLite, Maven");
+                    humanAndMachine.commit("C#");
                     humanAndMachine.commit("").tag({name: 'Tools:        ', style: getCustomSubHeaderStyle(7)});
-                    humanAndMachine.commit("Github, Intellij, SceneBuilder, Git CLI")
+                    humanAndMachine.commit("Unity, Asesprite, Rider, Github")
                     humanAndMachine.commit("").tag({name: 'Skills:         ', style: getCustomSubHeaderStyle(7)});
-                    humanAndMachine.commit("cooperative programming, Gitflow, GUI, multi modules project");
+                    humanAndMachine.commit("game development, graphic design, graphic animation, game design");
                     develop.merge({branch: humanAndMachine, commitOptions: {subject: ' ',},});
 
                     master.commit("");

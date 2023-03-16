@@ -29,12 +29,12 @@ function Home() {
                 margin: 'auto'
             }}>
             <Typography style={{
-                font: 'italic 32px serif',
+                font: 'italic 32px roboto',
             }}>
                 Hi, I'm
             </Typography>
             <Typography style={{
-                font: 'bold 64px serif',
+                font: 'bold 64px roboto',
             }}>
                 Lennart Protte
             </Typography>
