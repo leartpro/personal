@@ -12,12 +12,11 @@ const About = () => {
         });
     }, []);
 
-    const emphasizedWords = ['programming', 'software', ' development', 'technologies', 'algorithmic', 'creative solutions'];
-
     return (
         <section id="about">
             <h1>About Me</h1>
-            <Typography className="test">{text}</Typography>
+            This is a <span className="type" >CSS only solution for a multi-line typewriter effect.</span>
+            <Typography className="typewriter">{text}</Typography>
         </section>
     );
 }
