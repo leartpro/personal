@@ -1,9 +1,0 @@
-@keyframes grow {
-  0% { max-height: 12px; }
-  100% { max-height: calc(12px * 6); }
-}
-
-.typewriter {
-  animation: grow 10s steps(6);
-  animation-fill-mode: forwards;
-}

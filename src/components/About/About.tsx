@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Typography} from "@mui/material";
 import axios from 'axios';
-import './about..scss'
+import Typewriter from 'react-ts-typewriter';
+
 
 const About = () => {
     const [text, setText] = useState('');
@@ -15,8 +16,9 @@ const About = () => {
     return (
         <section id="about">
             <h1>About Me</h1>
-            This is a <span className="type" >CSS only solution for a multi-line typewriter effect.</span>
-            <Typography className="typewriter">{text}</Typography>
+            <Typography>
+                <Typewriter text={text} speed={10} loop={false} cursor={true} />
+            </Typography>
         </section>
     );
 }
