@@ -17,6 +17,7 @@ const About = () => {
         <section id="about">
             <h1>About Me</h1>
             <Typography>
+                {/*TODO: use onFinish Hook from Typewriterto display line by line*/}
                 <Typewriter text={text} speed={10} loop={false} cursor={true} />
             </Typography>
         </section>
