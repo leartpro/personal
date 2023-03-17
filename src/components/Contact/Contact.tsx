@@ -6,7 +6,6 @@ import serverConfig from './serverConfig.json';
 const serverAddress = serverConfig.serverAddress;
 const serverPort = serverConfig.serverPort;
 
-
 const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -68,5 +67,4 @@ const Contact = () => {
         </section>
     );
 }
-
 export default Contact;
