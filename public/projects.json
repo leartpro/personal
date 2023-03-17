@@ -54,5 +54,12 @@
     "image": "/images/projects/bwinf41.jpg",
     "description": "Participation in the German National Computer Science Competition Round Two",
     "content": "Weitere Details über Projekt 8"
+  },
+  {
+    "id": 9,
+    "title": "Human & Machine",
+    "image": "/images/projects/dummy.jpeg",
+    "description": "My first Game, made with Unity",
+    "content": "Weitere Details über Projekt 9"
   }
 ]
