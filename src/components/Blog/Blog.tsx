@@ -8,7 +8,7 @@ import {IconButton, ImageListItem, ImageListItemBar, ListSubheader} from "@mui/m
 
 const Blog = ({projects}: { projects: Project[] }) => {
     return (
-        <section id={"blog"}>
+        <section id={"blog"} style={{marginLeft: '8px', marginRight: '8px'}}>
             <h1>Blog</h1>
             <ImageList variant="masonry" cols={3} gap={8}>
                 <ImageListItem key="Subheader" cols={2}>
