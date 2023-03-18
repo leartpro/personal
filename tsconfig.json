@@ -10,7 +10,7 @@
     "types": [
       "node",
       "react",
-      "react-dom",
+      "react-dom"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -24,9 +24,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "react-jsx"
   },
   "include": [
-    "src",
+    "src"
   ]
 }

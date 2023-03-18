@@ -2,7 +2,7 @@ import React from 'react';
 import {Gitgraph, Orientation, templateExtend, TemplateName} from "@gitgraph/react";
 
 
-function JourneyGraph() {
+function ProjectGraph() {
     const colors = ["gray", "green", "gold", "dodgerblue", "steelblue", "slateblue", "blueviolet", "darkmagenta", "darkslateblue", "navy", "indigo"]
 
     function getCustomHeaderStyle(index: number) {
@@ -149,4 +149,4 @@ function JourneyGraph() {
     );
 }
 
-export default React.memo(JourneyGraph);
+export default React.memo(ProjectGraph);
