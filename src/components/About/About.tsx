@@ -16,10 +16,10 @@ const About = () => {
     return (
         <section id="about">
             <h1>About Me</h1>
-            <Typography style={{marginLeft: '10%', marginRight: '10%', whiteSpace: 'pre'}}>
+            <Typography display="block" style={{marginLeft: '10%', marginRight: '10%', whiteSpace: 'pre', textAlign: "left", height: '307px'}}>
                 <Typewriter
                     text={text}
-                    speed={0.1}
+                    speed={0}
                     loop={false}
                     cursor={true}
                 />
