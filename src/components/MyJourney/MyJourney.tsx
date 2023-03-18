@@ -1,5 +1,5 @@
 import React from 'react';
-import JourneyGraph from "./ProjectGraph";
+import ProjectGraph from "./ProjectGraph";
 import {Tabs, Tab, Typography, Box} from '@mui/material';
 
 interface TabPanelProps {
@@ -54,7 +54,7 @@ const MyJourney = () => {
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
-                    <JourneyGraph/>
+                    <ProjectGraph/>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     Item Two
