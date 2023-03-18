@@ -1,6 +1,8 @@
 import React from 'react';
 import ProjectGraph from "./ProjectGraph";
 import {Tabs, Tab, Typography, Box} from '@mui/material';
+import EducationGraph from "./EducationGraph";
+import KnowledgeGraph from "./KnowledgeGraph";
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -57,10 +59,10 @@ const MyJourney = () => {
                     <ProjectGraph/>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    Item Two
+                    <EducationGraph/>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    Item Three
+                    <KnowledgeGraph/>
                 </TabPanel>
             </Box>
         </section>
