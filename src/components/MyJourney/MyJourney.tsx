@@ -1,8 +1,8 @@
 import React from 'react';
-import ProjectGraph from "./ProjectGraph";
 import {Tabs, Tab, Typography, Box} from '@mui/material';
 import EducationGraph from "./EducationGraph";
-import KnowledgeGraph from "./KnowledgeGraph";
+import SkillGraph from "./SkillGraph";
+import ProficienciesGraph from "./ProficienciesGraph";
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -17,8 +17,8 @@ function TabPanel(props: TabPanelProps) {
         <div
             role="tabpanel"
             hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
+            id={`tabpanel-${index}`}
+            aria-labelledby={`tab-${index}`}
             {...other}
         >
             {value === index && (
@@ -32,8 +32,8 @@ function TabPanel(props: TabPanelProps) {
 
 function a11yProps(index: number) {
     return {
-        id: `simple-tab-${index}`,
-        'aria-controls': `simple-tabpanel-${index}`,
+        id: `tab-${index}`,
+        'aria-controls': `tabpanel-${index}`,
     };
 }
 
@@ -49,20 +49,20 @@ const MyJourney = () => {
             <h1>MyJourney</h1>
             <Box sx={{width: '100%'}}>
                 <Box sx={{borderBottom: 1, borderColor: 'divider'}}>
-                    <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                        <Tab label="Projects" {...a11yProps(0)} />
+                    <Tabs value={value} onChange={handleChange}>
+                        <Tab label="Proficiencies" {...a11yProps(0)} />
                         <Tab label="Education" {...a11yProps(1)} />
-                        <Tab label="Knowledge" {...a11yProps(2)} />
+                        <Tab label="Skills" {...a11yProps(2)} />
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
-                    <ProjectGraph/>
+                    <ProficienciesGraph/>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <EducationGraph/>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    <KnowledgeGraph/>
+                    <SkillGraph/>
                 </TabPanel>
             </Box>
         </section>

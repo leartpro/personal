@@ -1,10 +1,9 @@
 import React from 'react';
-import {Gitgraph, Orientation, templateExtend, TemplateName} from "@gitgraph/react";
 import ReactApexChart from "react-apexcharts";
 import {ApexOptions} from "apexcharts";
 
 
-function KnowledgeGraph() {
+function SkillGraph() {
     const options: ApexOptions = {
         chart: {
             height: 350,
@@ -30,6 +29,10 @@ function KnowledgeGraph() {
             colors: ['#fff'],
             strokeWidth: 2,
         },
+        title: {
+            text: 'Distibuted Treemap (different color for each cell)',
+            align: 'center'
+        },
         tooltip: {
             y: {
                 formatter: function (val: any) {
@@ -54,19 +57,19 @@ function KnowledgeGraph() {
         }
     };
 
-const series = [{
-    name: 'Series 1',
-    data: [20, 100, 40, 30, 50, 80, 33],
-}]
+    const series = [{
+        name: 'Series 1',
+        data: [20, 100, 40, 30, 50, 80, 33],
+    }]
 
-return (
-    <ReactApexChart
-        options={options}
-        series={series}
-        type="radar"
-        height={350}
-    />
-);
+    return (
+        <ReactApexChart
+            options={options}
+            series={series}
+            type="radar"
+            height={350}
+        />
+    );
 }
 
-export default React.memo(KnowledgeGraph);
+export default React.memo(SkillGraph);

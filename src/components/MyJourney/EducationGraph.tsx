@@ -1,5 +1,4 @@
 import React from 'react';
-import {Gitgraph, Orientation, templateExtend, TemplateName} from "@gitgraph/react";
 import ReactApexChart from "react-apexcharts";
 import {ApexOptions} from "apexcharts";
 
@@ -52,38 +51,42 @@ function EducationGraph() {
     }]
 
     const options: ApexOptions = {
-            chart: {
-                height: 350,
-                type: 'rangeBar'
-            },
-            plotOptions: {
-                bar: {
-                    horizontal: true,
-                    distributed: true,
-                    dataLabels: {
-                        hideOverflowingLabels: false
-                    }
-                }
-            },
-            dataLabels: {
-                enabled: true,
-                style: {
-                    colors: ['#f3f4f5', '#fff']
-                }
-            },
-            xaxis: {
-                type: 'datetime'
-            },
-            yaxis: {
-                show: false
-            },
-            grid: {
-                row: {
-                    colors: ['#f3f4f5', '#fff'],
-                    opacity: 1
+        chart: {
+            height: 350,
+            type: 'rangeBar'
+        },
+        plotOptions: {
+            bar: {
+                horizontal: true,
+                distributed: true,
+                dataLabels: {
+                    hideOverflowingLabels: false
                 }
             }
+        },
+        dataLabels: {
+            enabled: true,
+            style: {
+                colors: ['#f3f4f5', '#fff']
+            }
+        },
+        xaxis: {
+            type: 'datetime'
+        },
+        yaxis: {
+            show: false
+        },
+        title: {
+            text: 'Distibuted Treemap (different color for each cell)',
+            align: 'center'
+        },
+        grid: {
+            row: {
+                colors: ['#f3f4f5', '#fff'],
+                opacity: 1
+            }
         }
+    }
 
     return (
         <ReactApexChart
