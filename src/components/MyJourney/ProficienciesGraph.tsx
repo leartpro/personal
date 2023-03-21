@@ -9,55 +9,55 @@ function ProficienciesGraph() {
         {
             data: [
                 {
-                    x: 'New Delhi',
+                    x: 'Java',
                     y: 218
                 },
                 {
-                    x: 'Kolkata',
+                    x: 'C++',
                     y: 149
                 },
                 {
-                    x: 'Mumbai',
+                    x: 'Figma',
                     y: 184
                 },
                 {
-                    x: 'Ahmedabad',
+                    x: 'Git',
                     y: 55
                 },
                 {
-                    x: 'Bangaluru',
+                    x: 'Miro',
                     y: 84
                 },
                 {
-                    x: 'Pune',
+                    x: 'Jetbrains IDE',
                     y: 31
                 },
                 {
-                    x: 'Chennai',
+                    x: 'Github',
                     y: 70
                 },
                 {
-                    x: 'Jaipur',
+                    x: 'Unity',
                     y: 30
                 },
                 {
-                    x: 'Surat',
+                    x: 'Linux',
                     y: 44
                 },
                 {
-                    x: 'Hyderabad',
+                    x: 'Terminal',
                     y: 68
                 },
                 {
-                    x: 'Lucknow',
+                    x: 'GUI',
                     y: 28
                 },
                 {
-                    x: 'Indore',
+                    x: 'SQL',
                     y: 19
                 },
                 {
-                    x: 'Kanpur',
+                    x: 'Latex',
                     y: 29
                 }
             ]
@@ -73,7 +73,7 @@ function ProficienciesGraph() {
             type: 'treemap'
         },
         title: {
-            text: 'Distibuted Treemap (different color for each cell)',
+            text: 'My Proficiencies',
             align: 'center'
         },
         colors: [

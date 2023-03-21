@@ -5,18 +5,20 @@ import {ApexOptions} from "apexcharts";
 
 function EducationGraph() {
 
+    const labes: string[] = ['test1', 'test2', 'test3', 'test4', 'test5', 'test6']
+
     const series = [{
         data: [
             {
-                x: 'Analysis',
+                x: 'Internships',
                 y: [
                     new Date('2019-02-27').getTime(),
                     new Date('2019-03-04').getTime()
                 ],
-                fillColor: '#008FFB'
+                fillColor: '#008FFB',
             },
             {
-                x: 'Design',
+                x: 'School',
                 y: [
                     new Date('2019-03-04').getTime(),
                     new Date('2019-03-08').getTime()
@@ -24,7 +26,7 @@ function EducationGraph() {
                 fillColor: '#00E396'
             },
             {
-                x: 'Coding',
+                x: 'Projects',
                 y: [
                     new Date('2019-03-07').getTime(),
                     new Date('2019-03-10').getTime()
@@ -32,20 +34,12 @@ function EducationGraph() {
                 fillColor: '#775DD0'
             },
             {
-                x: 'Testing',
+                x: 'Competitions',
                 y: [
                     new Date('2019-03-08').getTime(),
                     new Date('2019-03-12').getTime()
                 ],
                 fillColor: '#FEB019'
-            },
-            {
-                x: 'Deployment',
-                y: [
-                    new Date('2019-03-12').getTime(),
-                    new Date('2019-03-17').getTime()
-                ],
-                fillColor: '#FF4560'
             }
         ]
     }]
@@ -66,6 +60,10 @@ function EducationGraph() {
         },
         dataLabels: {
             enabled: true,
+            textAnchor: 'start',
+            formatter: function (val, opt) {
+                return labes[opt.dataPointIndex]
+            },
             style: {
                 colors: ['#f3f4f5', '#fff']
             }
@@ -77,7 +75,7 @@ function EducationGraph() {
             show: false
         },
         title: {
-            text: 'Distibuted Treemap (different color for each cell)',
+            text: 'My Education',
             align: 'center'
         },
         grid: {

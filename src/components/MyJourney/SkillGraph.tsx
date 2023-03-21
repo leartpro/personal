@@ -30,7 +30,7 @@ function SkillGraph() {
             strokeWidth: 2,
         },
         title: {
-            text: 'Distibuted Treemap (different color for each cell)',
+            text: 'My Skills',
             align: 'center'
         },
         tooltip: {
@@ -41,7 +41,7 @@ function SkillGraph() {
             }
         },
         xaxis: {
-            categories: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            categories: ['algorithmic', 'database', 'testing', 'communication', 'version control', 'networking', 'multithreading']
         },
         yaxis: {
             tickAmount: 7,
@@ -59,7 +59,7 @@ function SkillGraph() {
 
     const series = [{
         name: 'Series 1',
-        data: [20, 100, 40, 30, 50, 80, 33],
+        data: [100, 60, 40, 50, 80, 80, 70],
     }]
 
     return (
