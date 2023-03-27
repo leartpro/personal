@@ -17,19 +17,19 @@ const ContentList = () => {
                 <ListItemIcon sx={{color: 'inherit'}}>
                     <Home/>
                 </ListItemIcon>
-                <ListItemText primary={'Home'}/>
+                <ListItemText primary={'About'}/>
             </ListItemButton>
             <ListItemButton>
                 <ListItemIcon sx={{color: 'inherit'}}>
                     <Home/>
                 </ListItemIcon>
-                <ListItemText primary={'Home'}/>
+                <ListItemText primary={'My Journey'}/>
             </ListItemButton>
             <ListItemButton>
                 <ListItemIcon sx={{color: 'inherit'}}>
                     <Home/>
                 </ListItemIcon>
-                <ListItemText primary={'Home'}/>
+                <ListItemText primary={'Blog'}/>
             </ListItemButton>
         </Box>
     );

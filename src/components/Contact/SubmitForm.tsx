@@ -24,52 +24,41 @@ const SubmitForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <FormGroup>
-                <Grid container justifyContent={"center"} alignItems={"center"}>
+                <FormLabel>Get in touch</FormLabel>
+                <Grid container>
                     <Grid item>
-                        <FormLabel>Get in touch</FormLabel>
+                        <FormControl>
+                            <InputLabel>Name</InputLabel>
+                            <Input
+                                required
+                                id="name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                        </FormControl>
                     </Grid>
-                    <Grid item container>
-                        <Grid item>
-                            <FormControl>
-                                <InputLabel>Name</InputLabel>
-                                <Input
-                                    required
-                                    id="name"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                />
-                            </FormControl>
-                        </Grid>
-                        <Grid item>
-                            <FormControl>
-                                <InputLabel>EMail</InputLabel>
-                                <Input
-                                    required
-                                    id="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                            </FormControl>
-                        </Grid>
-                    </Grid>
-                    <Grid item container>
-                        <Grid item>
-                            <FormControl>
-                                <InputLabel>Message</InputLabel>
-                                <Input
-                                    required
-                                    id="message"
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                />
-                            </FormControl>
-                        </Grid>
-                        <Grid item>
-                            <Button variant="contained" type="submit"
-                                    style={{marginLeft: '25%', marginRight: '25%'}}>Send Message</Button>
-                        </Grid>
+                    <Grid item>
+                        <FormControl>
+                            <InputLabel>EMail</InputLabel>
+                            <Input
+                                required
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </FormControl>
                     </Grid>
                 </Grid>
+                <FormControl>
+                    <InputLabel>Message</InputLabel>
+                    <Input
+                        required
+                        id="message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                    />
+                </FormControl>
+                <Button variant="contained" type="submit">Send Message</Button>
             </FormGroup>
         </form>
     );
