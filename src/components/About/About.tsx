@@ -6,6 +6,7 @@ import Typewriter from 'react-ts-typewriter';
 
 const About = () => {
     const [text, setText] = useState('');
+    let p: boolean = true;
 
     useEffect(() => {
         axios.get('./Content/About.txt').then((response) => {
@@ -16,12 +17,12 @@ const About = () => {
     return (
         <section id="about">
             <h1>About Me</h1>
-            <Typography display="block" style={{marginLeft: '10%', marginRight: '10%', whiteSpace: 'pre', textAlign: "left", height: '307px'}}>
+            <Typography display="block" style={{whiteSpace: 'pre', textAlign: "left", height: '307px'}}>
                 <Typewriter
                     text={text}
                     speed={0}
                     loop={false}
-                    cursor={true}
+                    cursor={false}
                 />
             </Typography>
         </section>

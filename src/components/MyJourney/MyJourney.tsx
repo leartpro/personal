@@ -47,7 +47,7 @@ const MyJourney = () => {
     return (
         <section id={"my-journey"}>
             <h1>MyJourney</h1>
-            <Box sx={{width: '100%'}}>
+            <Box>
                 <Box sx={{borderBottom: 1, borderColor: 'divider'}}>
                     <Tabs value={value} onChange={handleChange}>
                         <Tab label="Proficiencies" {...a11yProps(0)} />

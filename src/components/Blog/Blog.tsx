@@ -8,7 +8,7 @@ import {IconButton, ImageListItem, ImageListItemBar, Typography} from "@mui/mate
 
 const Blog = ({projects}: { projects: Project[] }) => {
     return (
-        <section id={"blog"} style={{marginLeft: '8px', marginRight: '8px'}}>
+        <section id={"blog"}>
             <h1>Blog</h1>
             <Typography>Here are some of my Projects, feel free to explore</Typography>
             <ImageList variant="masonry" cols={3} gap={8}>

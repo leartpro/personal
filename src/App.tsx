@@ -20,7 +20,7 @@ function App() {
         });
     }, []);
     return (
-        <div className="app" style={{marginLeft: '8px', marginRight: '8px'}}>
+        <div className="app">
             <Router>
                 <div>
                     <Routes>
