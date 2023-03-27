@@ -1,5 +1,5 @@
 import React from 'react';
-import { Parallax } from "react-parallax";
+import {Parallax} from "react-parallax";
 import {Typography} from "@mui/material";
 
 function Home() {
@@ -15,7 +15,8 @@ function Home() {
                     width: '700px',
                     left: '65%',
                     top: '50px',
-                    transform: 'translate(-50%, 0%)'}}
+                    transform: 'translate(-50%, 0%)'
+                }}
             />
             <div style={{
                 color: 'black',
@@ -28,16 +29,16 @@ function Home() {
                 height: 'fit-content',
                 margin: 'auto'
             }}>
-            <Typography style={{
-                font: 'italic 32px roboto',
-            }}>
-                Hi, I'm
-            </Typography>
-            <Typography style={{
-                font: 'bold 64px roboto',
-            }}>
-                Lennart Protte
-            </Typography>
+                <Typography style={{
+                    font: 'italic 32px roboto',
+                }}>
+                    Hi, I'm
+                </Typography>
+                <Typography style={{
+                    font: 'bold 64px roboto',
+                }}>
+                    Lennart Protte
+                </Typography>
             </div>
 
         </section>
