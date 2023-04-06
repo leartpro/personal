@@ -5,7 +5,12 @@ import {ApexOptions} from "apexcharts";
 
 function EducationGraph() {
 
-    const labes: string[] = ['test1', 'test2', 'test3', 'test4', 'test5', 'test6', 'test7', 'test8', 'test9', 'test10', 'test11', 'test12']
+    const labes: string[] = [
+        'Grundschule', 'Gymnasium',
+        'Telekom', 'Brunata', 'Hochhaus Digital',
+        'test6', 'test7', 'test8', 'test9', 'test10', 'test11', 'test12',
+        'BWINF Round 1', 'BWINF Round 2'
+    ]
 
     const series = [{
         data: [
@@ -40,6 +45,62 @@ function EducationGraph() {
                     new Date('2019-03-08').getTime()
                 ],
                 fillColor: '#00E396'
+            },
+            {
+                x: 'Internships',
+                y: [
+                    new Date('2019-05-04').getTime(),
+                    new Date('2019-05-08').getTime()
+                ],
+                fillColor: '#00E396'
+            },
+            {
+                x: 'Projects',
+                y: [
+                    new Date('2019-03-07').getTime(),
+                    new Date('2019-03-10').getTime()
+                ],
+                fillColor: '#775DD0'
+            },
+            {
+                x: 'Projects',
+                y: [
+                    new Date('2019-03-07').getTime(),
+                    new Date('2019-03-10').getTime()
+                ],
+                fillColor: '#775DD0'
+            },
+            {
+                x: 'Projects',
+                y: [
+                    new Date('2019-03-07').getTime(),
+                    new Date('2019-03-10').getTime()
+                ],
+                fillColor: '#775DD0'
+            },
+            {
+                x: 'Projects',
+                y: [
+                    new Date('2019-03-07').getTime(),
+                    new Date('2019-03-10').getTime()
+                ],
+                fillColor: '#775DD0'
+            },
+            {
+                x: 'Projects',
+                y: [
+                    new Date('2019-03-07').getTime(),
+                    new Date('2019-03-10').getTime()
+                ],
+                fillColor: '#775DD0'
+            },
+            {
+                x: 'Projects',
+                y: [
+                    new Date('2019-03-07').getTime(),
+                    new Date('2019-03-10').getTime()
+                ],
+                fillColor: '#775DD0'
             },
             {
                 x: 'Projects',

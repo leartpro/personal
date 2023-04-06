@@ -7,7 +7,7 @@ function Home() {
         <section id={"home"}>
             <Parallax
                 blur={0}
-                bgImage={"./images/portrait.png"}
+                bgImage={"./Images/portrait.png"}
                 bgImageAlt="It's Me"
                 strength={300}
                 style={{
