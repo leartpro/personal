@@ -1,0 +1,30 @@
+{
+  "navTextInitialState": "Home",
+  "navigations": [
+    {
+      "href": "#home",
+      "anchorID": "home",
+      "navText": "Home"
+    },
+    {
+      "href": "#my-journey",
+      "anchorID": "my-journey",
+      "navText": "My Journey"
+    },
+    {
+      "href": "#home",
+      "anchorID": "home",
+      "navText": "Home"
+    },
+    {
+      "href": "#blog",
+      "anchorID": "blog",
+      "navText": "Blog"
+    },
+    {
+      "href": "#contact",
+      "anchorID": "contact",
+      "navText": "Contact"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 export interface Navigation {
-    href: number;
+    href: string;
     anchorID: string;
     navText: string;
 }

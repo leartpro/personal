@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {Project} from "./types/Project";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import HomePage from "./pages/HomePage";
+import Contact from "./components/Contact/Contact";
 
 function App() {
     const [projects, setProjects] = useState<Project[]>([]);
@@ -27,6 +28,7 @@ function App() {
                         <Route path="" element={<HomePage projects={projects}/>}/>
                         <Route path="project/:id" element={<ProjectDetailsPage blogPosts={projects}/>} />
                     </Routes>
+                    <Contact/>
                 </div>
             </Router>
         </div>

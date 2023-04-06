@@ -11,11 +11,12 @@ const SourceList = () => {
                 <List>
                     <ListItem>
                         <ListItemAvatar><Avatar><GitHubIcon/></Avatar></ListItemAvatar>
-                        <ListItemText><Link>Github</Link></ListItemText>
+                        <ListItemText><Link href="https://github.com/leartpro">leartpro</Link></ListItemText>
                     </ListItem>
                     <ListItem>
                         <ListItemAvatar><Avatar><EmailIcon/></Avatar></ListItemAvatar>
-                        <ListItemText><Link>Mail</Link></ListItemText>
+                        {/*TODO: Copy to Clipboard with Popover*/}
+                        <ListItemText><Link>lennartprotte.tech@gmail.com</Link></ListItemText>
                     </ListItem>
                 </List>
             </Box>
