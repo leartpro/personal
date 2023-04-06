@@ -15,13 +15,9 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
         return <div>Blog post not found.</div>;
     }
 
-    function toLastPage() {
-        history(-1);
-    }
-
     return (
             <section>
-                <Fab aria-label={"back"} onClick={toLastPage}><ChevronLeftIcon/></Fab>
+                <Fab aria-label={"back"} onClick={() => {history(-1)}}><ChevronLeftIcon/></Fab>
                 <h2>{post.title}</h2>
                 <h3>{post.description}</h3>
                 <Typography>{post.content}</Typography>

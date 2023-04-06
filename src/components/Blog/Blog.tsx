@@ -4,8 +4,6 @@ import {Project} from "../../types/Project";
 import ImageList from '@mui/material/ImageList';
 import {IconButton, ImageListItem, ImageListItemBar, Typography} from "@mui/material";
 
-//TODO: only use @mui instead of @material-ui
-
 const Blog = ({projects}: { projects: Project[] }) => {
     return (
         <section id={"blog"}>

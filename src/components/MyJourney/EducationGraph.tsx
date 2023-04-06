@@ -5,20 +5,36 @@ import {ApexOptions} from "apexcharts";
 
 function EducationGraph() {
 
-    const labes: string[] = ['test1', 'test2', 'test3', 'test4', 'test5', 'test6']
+    const labes: string[] = ['test1', 'test2', 'test3', 'test4', 'test5', 'test6', 'test7', 'test8', 'test9', 'test10', 'test11', 'test12']
 
     const series = [{
         data: [
             {
-                x: 'Internships',
+                x: 'School',
                 y: [
-                    new Date('2019-02-27').getTime(),
-                    new Date('2019-03-04').getTime()
+                    new Date('2011-02-27').getTime(),
+                    new Date('2015-03-04').getTime()
                 ],
-                fillColor: '#008FFB',
+                fillColor: '#008FFB'
             },
             {
                 x: 'School',
+                y: [
+                    new Date('2016-02-27').getTime(),
+                    new Date('2023-03-04').getTime()
+                ],
+                fillColor: '#008FFB'
+            },
+            {
+                x: 'Internships',
+                y: [
+                    new Date('2018-03-04').getTime(),
+                    new Date('2018-03-08').getTime()
+                ],
+                fillColor: '#00E396'
+            },
+            {
+                x: 'Internships',
                 y: [
                     new Date('2019-03-04').getTime(),
                     new Date('2019-03-08').getTime()
@@ -36,13 +52,22 @@ function EducationGraph() {
             {
                 x: 'Competitions',
                 y: [
-                    new Date('2019-03-08').getTime(),
-                    new Date('2019-03-12').getTime()
+                    new Date('2022-01-08').getTime(),
+                    new Date('2022-03-12').getTime()
+                ],
+                fillColor: '#FEB019'
+            },
+            {
+                x: 'Competitions',
+                y: [
+                    new Date('2023-01-01').getTime(),
+                    new Date('2023-03-12').getTime()
                 ],
                 fillColor: '#FEB019'
             }
         ]
-    }]
+    }
+    ]
 
     const options: ApexOptions = {
         chart: {
