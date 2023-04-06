@@ -9,7 +9,7 @@ function App() {
     const [projects, setProjects] = useState<Project[]>([]);
 
     async function fetchProjects() {
-        const response = await fetch("/projects.json");
+        const response = await fetch("/Previews/projects.json");
         return await response.json();
     }
 

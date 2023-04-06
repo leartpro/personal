@@ -7,14 +7,14 @@ import { useNavigate } from 'react-router-dom';
 
 const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     const {id} = useParams<{ id?: string }>();
-    const parsedId = id ? +id : undefined;
-    const post = props.blogPosts.find((post) => post.id === parsedId);
+    const post = props.blogPosts.find((post) => post.id === (id ? +id : undefined));
     const history = useNavigate();
 
     if (!post) {
         return <div>Blog post not found.</div>;
     }
 
+    //TODO: fetch Project content from file and load it
     return (
             <section>
                 <Fab aria-label={"back"} onClick={() => {history(-1)}}><ChevronLeftIcon/></Fab>
