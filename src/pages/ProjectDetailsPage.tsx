@@ -1,15 +1,18 @@
 import {useParams} from "react-router-dom";
-import {Project} from "../types/Project";
+import {Project} from "../interfaces/Project";
 import React, {useEffect, useState} from "react";
 import {Box, Typography} from "@mui/material";
-import {Content} from "../types/Content";
+import {Content} from "../interfaces/Content";
 import {Parallax} from "react-parallax";
 import Header from "../components/Header/Header";
 import {Image} from "@mui/icons-material";
 import Contact from "../components/Contact/Contact";
+import {Navigation} from "../interfaces/Navigation";
 
 const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     const {id} = useParams<{ id?: string }>();
+    const [navigations, setNavigations] = useState<Navigation[]>([]);
+    const [navText, setNavText] = useState('');
     const [content, setContent] = useState<Content>(
         {
             title: "title",
@@ -29,16 +32,29 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
         return await response.json();
     }
 
+    async function fetchNavigations() {
+        const response = await fetch(content.navData);
+        return await response.json();
+    }
+
     useEffect(() => {
         fetchContent().then(data => {
             setContent(data);
-        }).catch(error => {
+        }).then(
+        ).catch(error => {
             console.error("Error fetching content:", error);
         });
+        fetchNavigations().then(data => {
+            setNavText(data.navTextInitialState);
+            setNavigations(data.navigations);
+        }).catch(error => {
+            console.error("Error fetching navigation:", error);
+        });
     }, []);
+
     return (
         <section>
-            <Header navData={content.navData}/>
+            <Header navigations={navigations} navText={navText}/>
             <Parallax
                 blur={0}
                 bgImage={content.image}
@@ -72,7 +88,7 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
                     <Image path={c[1]}/>
                 </Box>
             ))}
-            <Contact/>
+            <Contact navigations={navigations}/>
         </section>
     );
 }

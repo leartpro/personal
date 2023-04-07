@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {Project} from "../../types/Project";
+import {Project} from "../../interfaces/Project";
 import ImageList from '@mui/material/ImageList';
 import {IconButton, ImageListItem, ImageListItemBar, Typography} from "@mui/material";
 

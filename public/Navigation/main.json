@@ -4,27 +4,32 @@
     {
       "href": "#home",
       "anchorID": "home",
-      "navText": "Home"
+      "navText": "Home",
+      "icon": "Home"
     },
     {
       "href": "#about",
       "anchorID": "about",
-      "navText": "About"
+      "navText": "About",
+      "icon": "Info"
     },
     {
       "href": "#my-journey",
       "anchorID": "my-journey",
-      "navText": "My Journey"
+      "navText": "My Journey",
+      "icon": "School"
     },
     {
       "href": "#blog",
       "anchorID": "blog",
-      "navText": "Blog"
+      "navText": "Blog",
+      "icon": "Book"
     },
     {
       "href": "#contact",
       "anchorID": "contact",
-      "navText": "Contact"
+      "navText": "Contact",
+      "icon": "ContactMail"
     }
   ]
 }

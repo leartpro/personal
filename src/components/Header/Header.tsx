@@ -1,40 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {AppBar, Grid, IconButton, Toolbar, Typography} from "@mui/material";
-import {Navigation} from "../../types/Navigation";
+import {Navigation} from "../../interfaces/Navigation";
 import {useNavigate} from 'react-router-dom';
-
-
-function scrollToAnchor(event: React.MouseEvent, anchorId: string) {
-    event.preventDefault();
-    const element = document.getElementById(anchorId);
-    if (element) {
-        element.scrollIntoView({behavior: "smooth", block: "start"});
-    }
-}
+import scrollToAnchor from "../../functions/Scroll";
 
 //reserved anchorId: 'back' (only use for navigations between pages)
-function Header({navData}: { navData: string }) {
-    const [navigations, setNavigations] = useState<Navigation[]>([]);
-    const [navText, setNavText] = useState('');
+function Header({navigations, navText}: { navigations: Navigation[], navText: string }) {
     const navigator = useNavigate();
-
-    async function fetchNavigations() {
-        const response = await fetch(navData);
-        return await response.json();
-    }
-
-    useEffect(() => {
-        fetchNavigations().then(data => {
-            setNavText(data.navTextInitialState);
-            setNavigations(data.navigations);
-        }).catch(error => {
-            console.error("Error fetching navigation:", error);
-        });
-    }, []);
-
-    function updateNavText(text: string) {
-        setNavText(text);
-    }
 
     return (
         <AppBar>
@@ -48,7 +20,7 @@ function Header({navData}: { navData: string }) {
                             <IconButton href={`${navigation.href}`} onClick={(event) => {
                                 if(navigation.anchorID == "back") navigator(-1);
                                 scrollToAnchor(event, navigation.anchorID);
-                                updateNavText(navigation.navText);
+                                navText = navigation.navText;
                             }}>{navigation.navText}</IconButton>
                         ))}
                     </Toolbar>

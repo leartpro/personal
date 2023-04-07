@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import {Project} from "./types/Project";
+import {Project} from "./interfaces/Project";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import HomePage from "./pages/HomePage";
 import Contact from "./components/Contact/Contact";
