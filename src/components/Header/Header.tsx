@@ -6,7 +6,7 @@ import scrollToAnchor from "../../functions/Scroll";
 
 //reserved anchorId: 'back' (only use for navigations between pages)
 function Header({navigations}: { navigations: Navigation[]}) {
-    const [current, setCurrent] = useState(navigations.at(0)?.navText);
+    const [current, setCurrent] = useState('Home');
     const navigator = useNavigate();
     return (
         <AppBar>
