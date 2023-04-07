@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {AppBar, Grid, IconButton, Toolbar, Typography} from "@mui/material";
 import {Navigation} from "../../types/Navigation";
+import {useNavigate} from 'react-router-dom';
+
 
 function scrollToAnchor(event: React.MouseEvent, anchorId: string) {
     event.preventDefault();
@@ -10,9 +12,11 @@ function scrollToAnchor(event: React.MouseEvent, anchorId: string) {
     }
 }
 
+//reserved anchorId: 'back' (only use for navigations between pages)
 function Header({navData}: { navData: string }) {
     const [navigations, setNavigations] = useState<Navigation[]>([]);
     const [navText, setNavText] = useState('');
+    const navigator = useNavigate();
 
     async function fetchNavigations() {
         const response = await fetch(navData);
@@ -24,7 +28,7 @@ function Header({navData}: { navData: string }) {
             setNavText(data.navTextInitialState);
             setNavigations(data.navigations);
         }).catch(error => {
-            console.error("Error fetching projects:", error);
+            console.error("Error fetching navigation:", error);
         });
     }, []);
 
@@ -42,6 +46,7 @@ function Header({navData}: { navData: string }) {
                     <Toolbar style={{alignItems: 'flex-end', justifyContent: 'flex-end'}}>
                         {navigations.map((navigation: Navigation) => (
                             <IconButton href={`${navigation.href}`} onClick={(event) => {
+                                if(navigation.anchorID == "back") navigator(-1);
                                 scrollToAnchor(event, navigation.anchorID);
                                 updateNavText(navigation.navText);
                             }}>{navigation.navText}</IconButton>

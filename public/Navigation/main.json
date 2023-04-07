@@ -7,14 +7,14 @@
       "navText": "Home"
     },
     {
+      "href": "#about",
+      "anchorID": "about",
+      "navText": "About"
+    },
+    {
       "href": "#my-journey",
       "anchorID": "my-journey",
       "navText": "My Journey"
-    },
-    {
-      "href": "#home",
-      "anchorID": "home",
-      "navText": "Home"
     },
     {
       "href": "#blog",
