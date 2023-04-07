@@ -26,7 +26,7 @@ const SubmitForm = () => {
             <Typography>Get in touch</Typography>
             <form onSubmit={handleSubmit}>
                 <FormGroup>
-                    <Grid container spacing={10}>
+                    <Grid container spacing={8}>
                         <Grid item>
                             <FormControl>
                                 <InputLabel>Name</InputLabel>
