@@ -2,6 +2,7 @@ import React from 'react';
 import {Box, List, ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
 import Home from '@mui/icons-material/Home';
 
+//TODO: content can change on switch to project side
 const ContentList = () => {
     return (
         <Box>

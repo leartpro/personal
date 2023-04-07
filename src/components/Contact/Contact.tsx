@@ -4,7 +4,7 @@ import ContentList from "./ContentList";
 import SubmitForm from "./SubmitForm";
 import SourceList from "./SourceList";
 
-
+//TODO: take arguments and transmit to ContentList
 const Contact = () => {
     return (
         <section id="contact">
