@@ -19,7 +19,7 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
         const post = props.blogPosts.find(
             (post) => post.id === (id ? +id : undefined)
         );
-        if (!post) return <div>Blog post not found.</div>;
+        if (!post) return {content: []};
         const response = await fetch(post.content);
         return await response.json();
     }
@@ -33,17 +33,22 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     useEffect(() => {
         fetchContent().then(data => {
             setContent(data);
-        }).then(
-        ).catch(error => {
+        }).catch(error => {
             console.error("Error fetching content:", error);
         });
-        fetchNavigations().then(data => {
-            setNavText(data.navTextInitialState);
-            setNavigations(data.navigations);
-        }).catch(error => {
-            console.error("Error fetching navigation:", error);
-        });
     }, []);
+
+    useEffect(() => {
+        if (content) {
+            fetchNavigations().then(data => {
+                setNavText(data.navTextInitialState);
+                setNavigations(data.navigations);
+            }).catch(error => {
+                console.error("Error fetching navigation:", error);
+            });
+        }
+    }, [content]);
+
 
     if (!content) return <div>Blog post not found.</div>;
     return (
@@ -79,7 +84,7 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
             {content.content.map((c: [string, string]) => (
                 <Box>
                     <Typography>{c[0]}</Typography>
-                    <Image path={c[1]}/>
+                    <img alt={c[0]} src={c[1]}/>
                 </Box>
             ))}
             <Contact navigations={navigations}/>

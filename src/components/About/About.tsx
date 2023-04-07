@@ -16,7 +16,7 @@ const About = () => {
     return (
         <section id="about">
             <h1>About Me</h1>
-            <Typography display="block" style={{whiteSpace: 'pre', textAlign: "left", height: '307px'}}>
+            <Typography display="block" style={{whiteSpace: 'pre', textAlign: "left", height: '331px'}}>
                 <Typewriter
                     text={text}
                     speed={0}
