@@ -5,14 +5,12 @@ import {Box, Typography} from "@mui/material";
 import {Content} from "../interfaces/Content";
 import {Parallax} from "react-parallax";
 import Header from "../components/Header/Header";
-import {Image} from "@mui/icons-material";
 import Contact from "../components/Contact/Contact";
 import {Navigation} from "../interfaces/Navigation";
 
 const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     const {id} = useParams<{ id?: string }>();
     const [navigations, setNavigations] = useState<Navigation[]>([]);
-    const [navText, setNavText] = useState('');
     const [content, setContent] = useState<Content>();
 
     async function fetchContent() {
@@ -41,7 +39,6 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     useEffect(() => {
         if (content) {
             fetchNavigations().then(data => {
-                setNavText(data.navTextInitialState);
                 setNavigations(data.navigations);
             }).catch(error => {
                 console.error("Error fetching navigation:", error);
@@ -53,7 +50,7 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     if (!content) return <div>Blog post not found.</div>;
     return (
         <section>
-            <Header navigations={navigations} navText={navText}/>
+            <Header navigations={navigations}/>
             <Parallax
                 blur={0}
                 bgImage={content.image}
@@ -81,8 +78,8 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
                 <Typography style={{font: 'bold 64px roboto'}}>{content.title}</Typography>
             </div>
             <Typography>{content.introduction}</Typography>
-            {content.content.map((c: [string, string]) => (
-                <Box>
+            {content.content.map((c: [string, string], i: number) => (
+                <Box id={navigations[i+1]?.anchorID}>
                     <Typography>{c[0]}</Typography>
                     <img alt={c[0]} src={c[1]}/>
                 </Box>

@@ -10,7 +10,6 @@ import {Navigation} from "../interfaces/Navigation";
 
 const HomePage= ({ projects }: { projects: Project[] }) => {
     const [navigations, setNavigations] = useState<Navigation[]>([]);
-    const [navText, setNavText] = useState('');
 
     async function fetchNavigations() {
         const response = await fetch("./Navigation/main.json");
@@ -19,7 +18,6 @@ const HomePage= ({ projects }: { projects: Project[] }) => {
 
     useEffect(() => {
         fetchNavigations().then(data => {
-            setNavText(data.navTextInitialState);
             setNavigations(data.navigations);
         }).catch(error => {
             console.error("Error fetching navigation:", error);
@@ -28,7 +26,7 @@ const HomePage= ({ projects }: { projects: Project[] }) => {
 
     return (
         <div>
-            <Header navigations={navigations} navText={navText}/>
+            <Header navigations={navigations}/>
             <Home/>
             <About/>
             <MyJourney/>

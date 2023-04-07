@@ -1,5 +1,4 @@
 {
-  "navTextInitialState": "Home",
   "navigations": [
     {
       "href": "#home",
@@ -30,6 +29,12 @@
       "anchorID": "test4",
       "navText": "Text4",
       "icon": "ShortText"
+    },
+    {
+      "href": "#contact",
+      "anchorID": "contact",
+      "navText": "Contact",
+      "icon": "ContactMail"
     }
   ]
 }
