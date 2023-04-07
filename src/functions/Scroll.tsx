@@ -1,5 +1,4 @@
 import React from "react";
-import * as punycode from "punycode";
 
 export default function scrollToAnchor(event: React.MouseEvent, anchorId: string) {
     event.preventDefault();

@@ -6,7 +6,6 @@ import Typewriter from 'react-ts-typewriter';
 
 const About = () => {
     const [text, setText] = useState('');
-    let p: boolean = true;
 
     useEffect(() => {
         axios.get('./Content/About.txt').then((response) => {
