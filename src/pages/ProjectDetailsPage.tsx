@@ -13,15 +13,7 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     const {id} = useParams<{ id?: string }>();
     const [navigations, setNavigations] = useState<Navigation[]>([]);
     const [navText, setNavText] = useState('');
-    const [content, setContent] = useState<Content>(
-        {
-            title: "title",
-            introduction: "introduction",
-            image: "path_to_image",
-            content: [["text", "path_to_image"]],
-            navData: "unknown"
-        }
-    );
+    const [content, setContent] = useState<Content>();
 
     async function fetchContent() {
         const post = props.blogPosts.find(
@@ -33,6 +25,7 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     }
 
     async function fetchNavigations() {
+        if (!content) return <div>Blog post not found.</div>;
         const response = await fetch(content.navData);
         return await response.json();
     }
@@ -52,6 +45,7 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
         });
     }, []);
 
+    if (!content) return <div>Blog post not found.</div>;
     return (
         <section>
             <Header navigations={navigations} navText={navText}/>
