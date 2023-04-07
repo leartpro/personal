@@ -2,63 +2,63 @@
   {
     "id": 1,
     "title": "TicTacToe",
-    "image": "/images/projects/tictactoe.png",
+    "image": "images/projects/tictactoe.png",
     "description": "A TicTacToe CLI/GUI game, written in pure Java",
     "content": "Weitere Details über Projekt 1"
   },
   {
     "id": 2,
     "title": "Quap",
-    "image": "/images/projects/quap.jpg",
+    "image": "images/projects/quap.jpg",
     "description": "Implementation of an exemplary network application to my term paper",
     "content": "Weitere Details über Projekt 2"
   },
   {
     "id": 3,
     "title": "Sudoku",
-    "image": "/images/projects/sudoku.png",
+    "image": "images/projects/sudoku.png",
     "description": "A Sudoku CLI game, written in pure Java",
     "content": "Weitere Details über Projekt 3"
   },
   {
     "id": 4,
     "title": "littSQL",
-    "image": "/images/projects/littSQL.ico",
+    "image": "images/projects/littSQL.ico",
     "description": "An interactive learning platform for learning SQL",
     "content": "Weitere Details über Projekt 4"
   },
   {
     "id": 5,
     "title": "chess4player",
-    "image": "/images/projects/chess4player.jpg",
+    "image": "images/projects/chess4player.jpg",
     "description": "A chess app, for four players chess",
     "content": "Weitere Details über Projekt 5"
   },
   {
     "id": 6,
     "title": "planck",
-    "image": "/images/projects/planck.jpg",
+    "image": "images/projects/planck.jpg",
     "description": "An own lightweight programming language",
     "content": "Weitere Details über Projekt 6"
   },
   {
     "id": 7,
     "title": "bwinf41.1",
-    "image": "/images/projects/bwinf411.png",
+    "image": "images/projects/bwinf411.png",
     "description": "Participation in the German National Computer Science Competition Round One",
     "content": "Weitere Details über Projekt 7"
   },
   {
     "id": 8,
     "title": "bwinf41.2",
-    "image": "/images/projects/bwinf412.png",
+    "image": "images/projects/bwinf412.png",
     "description": "Participation in the German National Computer Science Competition Round Two",
     "content": "Weitere Details über Projekt 8"
   },
   {
     "id": 9,
     "title": "Human & Machine",
-    "image": "/images/projects/dummy.jpeg",
+    "image": "images/projects/dummy.jpeg",
     "description": "My first Game, made with Unity",
     "content": "Weitere Details über Projekt 9"
   }
