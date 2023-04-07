@@ -6,6 +6,7 @@ import {Content} from "../types/Content";
 import {Parallax} from "react-parallax";
 import Header from "../components/Header/Header";
 import {Image} from "@mui/icons-material";
+import Contact from "../components/Contact/Contact";
 
 const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     const {id} = useParams<{ id?: string }>();
@@ -71,6 +72,7 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
                     <Image path={c[1]}/>
                 </Box>
             ))}
+            <Contact/>
         </section>
     );
 }

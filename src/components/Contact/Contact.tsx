@@ -3,9 +3,10 @@ import {Divider, Grid,} from "@mui/material";
 import ContentList from "./ContentList";
 import SubmitForm from "./SubmitForm";
 import SourceList from "./SourceList";
+import {Navigation} from "react-router-dom";
 
 //TODO: take arguments and transmit to ContentList
-const Contact = () => {
+const Contact = ({contentList}: { contentList: [Navigation, object][]}) => {
     return (
         <section id="contact">
             <Divider variant="middle"/>

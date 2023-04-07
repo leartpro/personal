@@ -5,6 +5,7 @@ import MyJourney from "../components/MyJourney/MyJourney";
 import Blog from "../components/Blog/Blog";
 import {Project} from "../types/Project";
 import Header from "../components/Header/Header";
+import Contact from "../components/Contact/Contact";
 
 const HomePage= ({ projects }: { projects: Project[] }) => {
     return (
@@ -14,6 +15,7 @@ const HomePage= ({ projects }: { projects: Project[] }) => {
             <About/>
             <MyJourney/>
             <Blog projects={projects}/>
+            <Contact/>
         </div>
     );
 }

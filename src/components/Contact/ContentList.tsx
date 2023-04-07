@@ -1,9 +1,10 @@
 import React from 'react';
 import {Box, List, ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
 import Home from '@mui/icons-material/Home';
+import {Navigation} from "react-router-dom";
 
 //TODO: content can change on switch to project side
-const ContentList = () => {
+const ContentList = ({contentList}: { contentList: [string, string, object][]}) => {
     return (
         <Box>
             <ListItemText primary="Contents"/>
