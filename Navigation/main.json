@@ -1,0 +1,35 @@
+{
+  "navTextInitialState": "Home",
+  "navigations": [
+    {
+      "href": "#home",
+      "anchorID": "home",
+      "navText": "Home",
+      "icon": "Home"
+    },
+    {
+      "href": "#about",
+      "anchorID": "about",
+      "navText": "About",
+      "icon": "Info"
+    },
+    {
+      "href": "#my-journey",
+      "anchorID": "my-journey",
+      "navText": "My Journey",
+      "icon": "School"
+    },
+    {
+      "href": "#blog",
+      "anchorID": "blog",
+      "navText": "Blog",
+      "icon": "Book"
+    },
+    {
+      "href": "#contact",
+      "anchorID": "contact",
+      "navText": "Contact",
+      "icon": "ContactMail"
+    }
+  ]
+}
