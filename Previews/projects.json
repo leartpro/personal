@@ -4,7 +4,7 @@
     "title": "TicTacToe",
     "image": "/Images/projects/tictactoe.png",
     "description": "A TicTacToe CLI/GUI game, written in pure Java",
-    "content": "Weitere Details über Projekt 1"
+    "content": "/Content/projects/tictactoe.json"
   },
   {
     "id": 2,

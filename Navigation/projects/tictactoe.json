@@ -1,0 +1,40 @@
+{
+  "navigations": [
+    {
+      "href": "#home",
+      "anchorID": "back",
+      "navText": "Home",
+      "icon": "Home"
+    },
+    {
+      "href": "#test1",
+      "anchorID": "test1",
+      "navText": "Text1",
+      "icon": "ShortText"
+    },
+    {
+      "href": "#test2",
+      "anchorID": "test2",
+      "navText": "Text2",
+      "icon": "ShortText"
+    },
+    {
+      "href": "#test3",
+      "anchorID": "test3",
+      "navText": "Text3",
+      "icon": "ShortText"
+    },
+    {
+      "href": "#test4",
+      "anchorID": "test4",
+      "navText": "Text4",
+      "icon": "ShortText"
+    },
+    {
+      "href": "#contact",
+      "anchorID": "contact",
+      "navText": "Contact",
+      "icon": "ContactMail"
+    }
+  ]
+}
