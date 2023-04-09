@@ -40,7 +40,6 @@ const SourceList = () => {
                     </ListItem>
                     <ListItem>
                         <ListItemAvatar><Avatar><EmailIcon/></Avatar></ListItemAvatar>
-                        {/*TODO: Copy to Clipboard with Popover*/}
                         <ListItemText><Link onClick={handleClick}>lennartprotte.tech@gmail.com</Link></ListItemText>
                         <Snackbar open={copied}
                                   autoHideDuration={6000}

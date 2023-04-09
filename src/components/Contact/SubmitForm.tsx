@@ -14,7 +14,7 @@ const SubmitForm = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = {name, email, message};
-        axios.post(`http://${serverAddress}:${serverPort}/contact`, data)
+        axios.post(`https://${serverAddress}:${serverPort}/contact`, data)
             .then(response => console.log(response))
             .catch(error => console.log(error));
         setName('');

@@ -13,7 +13,6 @@ const Blog = ({projects}: { projects: Project[] }) => {
                 {projects.map((project: Project) => (
                     <Link to={`/project/${project.id}`} key={project.id}>
                         <ImageListItem key={project.image} >
-                            {/*TODO: image height of 400 is not applied*/}
                             <img style={{maxHeight:"479px"}} src={`${project.image}`} alt={project.title} loading="lazy"/>
                             <ImageListItemBar
                                 title={project.title}
