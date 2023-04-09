@@ -18,7 +18,7 @@ function Header({navigations}: { navigations: Navigation[]}) {
                     <Toolbar style={{alignItems: 'flex-end', justifyContent: 'flex-end'}}>
                         {navigations.map((navigation: Navigation) => (
                             <IconButton href={`${navigation.href}`} onClick={(event) => {
-                                if(navigation.anchorID === "back") navigator(-1);
+                                if(navigation.anchorID === "home") navigator(-1);
                                 scrollToAnchor(event, navigation.anchorID);
                                 setCurrent(navigation.navText)
                             }}>{navigation.navText}</IconButton>

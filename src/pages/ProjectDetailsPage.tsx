@@ -54,7 +54,7 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
             <Parallax
                 blur={0}
                 bgImage={content.image}
-                bgImageAlt="It's Me"
+                bgImageAlt="Parallax"
                 strength={300}
                 style={{
                     height: '700px',
@@ -75,11 +75,14 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
                 height: 'fit-content',
                 margin: 'auto'
             }}>
-                <Typography style={{font: 'bold 64px roboto'}}>{content.title}</Typography>
+                <Typography id={navigations[0]?.anchorID}
+                            style={{font: 'bold 64px roboto'}}>
+                    {content.title}
+                </Typography>
             </div>
             <Typography>{content.introduction}</Typography>
             {content.content.map((c: [string, string], i: number) => (
-                <Box id={navigations[i+1]?.anchorID}>
+                <Box id={navigations[i + 1]?.anchorID}>
                     <Typography>{c[0]}</Typography>
                     <img alt={c[0]} src={c[1]}/>
                 </Box>

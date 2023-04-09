@@ -17,7 +17,6 @@ const ContentList = ({navigations}: { navigations: Navigation[] }) => {
                     {navigations.map((navigation: Navigation) => (
                         <ListItemButton href={navigation.href} onClick={
                             (event) => {
-                                if (navigation.anchorID === "back") navigator(-1);
                                 scrollToAnchor(event, navigation.anchorID);
                             }
                         }>

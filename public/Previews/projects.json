@@ -11,55 +11,55 @@
     "title": "Quap",
     "image": "/Images/projects/quap.jpg",
     "description": "Implementation of an exemplary network application to my term paper",
-    "content": "Weitere Details über Projekt 2"
+    "content": "/Content/projects/quap.json"
   },
   {
     "id": 3,
     "title": "Sudoku",
     "image": "/Images/projects/sudoku.png",
     "description": "A Sudoku CLI game, written in pure Java",
-    "content": "Weitere Details über Projekt 3"
+    "content": "/Content/projects/sudoku.json"
   },
   {
     "id": 4,
     "title": "littSQL",
     "image": "/Images/projects/littSQL.ico",
     "description": "An interactive learning platform for learning SQL",
-    "content": "Weitere Details über Projekt 4"
+    "content": "/Content/projects/littSQL.json"
   },
   {
     "id": 5,
     "title": "chess4player",
     "image": "/Images/projects/chess4player.jpg",
     "description": "A chess app, for four players chess",
-    "content": "Weitere Details über Projekt 5"
+    "content": "/Content/projects/chess4player.json"
   },
   {
     "id": 6,
     "title": "planck",
     "image": "/Images/projects/planck.jpg",
     "description": "An own lightweight programming language",
-    "content": "Weitere Details über Projekt 6"
+    "content": "/Content/projects/planck.json"
   },
   {
     "id": 7,
     "title": "bwinf41.1",
     "image": "/Images/projects/bwinf411.png",
     "description": "Participation in the German National Computer Science Competition Round One",
-    "content": "Weitere Details über Projekt 7"
+    "content": "/Content/projects/bwinf411.json"
   },
   {
     "id": 8,
     "title": "bwinf41.2",
     "image": "/Images/projects/bwinf412.png",
     "description": "Participation in the German National Computer Science Competition Round Two",
-    "content": "Weitere Details über Projekt 8"
+    "content": "/Content/projects/bwinf412.json"
   },
   {
     "id": 9,
     "title": "Human & Machine",
     "image": "/Images/projects/dummy.jpeg",
     "description": "My first Game, made with Unity",
-    "content": "Weitere Details über Projekt 9"
+    "content": "/Content/projects/human&machine.json"
   }
 ]
