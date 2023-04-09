@@ -58,7 +58,7 @@
   {
     "id": 9,
     "title": "Human & Machine",
-    "image": "/Images/projects/dummy.jpeg",
+    "image": "/Images/projects/human&machine.svg",
     "description": "My first Game, made with Unity",
     "content": "/Content/projects/human&machine.json"
   }
