@@ -3,11 +3,9 @@ import {Box, List, ListItemButton, ListItemText} from "@mui/material";
 import {Navigation} from "../../interfaces/Navigation";
 import DynamicListIcon from "./DynamicListIcon";
 import scrollToAnchor from "../../functions/Scroll";
-import {useNavigate} from "react-router-dom";
 
 //TODO: content can change on switch to project side
 const ContentList = ({navigations}: { navigations: Navigation[] }) => {
-    const navigator = useNavigate();
 
     return (
         <Box>
