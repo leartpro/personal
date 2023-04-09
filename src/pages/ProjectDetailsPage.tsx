@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {Project} from "../interfaces/Project";
 import React, {useEffect, useState} from "react";
-import {Box, Typography} from "@mui/material";
+import {Box, CircularProgress, Typography} from "@mui/material";
 import {Content} from "../interfaces/Content";
 import {Parallax} from "react-parallax";
 import Header from "../components/Header/Header";
@@ -12,6 +12,8 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     const {id} = useParams<{ id?: string }>();
     const [navigations, setNavigations] = useState<Navigation[]>([]);
     const [content, setContent] = useState<Content>();
+    const [valid, setValid] = useState<boolean>(true);
+
 
     async function fetchContent() {
         const post = props.blogPosts.find(
@@ -33,6 +35,7 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
             setContent(data);
         }).catch(error => {
             console.error("Error fetching content:", error);
+            setValid(false);
         });
     }, []);
 
@@ -42,12 +45,17 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
                 setNavigations(data.navigations);
             }).catch(error => {
                 console.error("Error fetching navigation:", error);
+                setValid(false);
             });
         }
     }, [content]);
 
-
-    if (!content) return <div>Blog post not found.</div>;
+    if (!content) {
+        if(valid) {
+            return <CircularProgress/>;
+        }
+        return <div>Blog not found!</div>;
+    }
     return (
         <section>
             <Header navigations={navigations}/>
