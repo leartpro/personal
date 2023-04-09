@@ -2,7 +2,7 @@
   "navigations": [
     {
       "href": "#home",
-      "anchorID": "back",
+      "anchorID": "home",
       "navText": "Home",
       "icon": "Home"
     },
