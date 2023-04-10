@@ -14,12 +14,9 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     const [content, setContent] = useState<Content>();
     const [valid, setValid] = useState<boolean>(true);
 
-
     async function fetchContent() {
-        const post = props.blogPosts.find(
-            (post) => post.id === (id ? +id : undefined)
-        );
-        if (!post) return {content: []};
+        const post = props.blogPosts.find((p) => p.id === (id ? +id : undefined));
+        if(!post) return;
         const response = await fetch(post.content);
         return await response.json();
     }
@@ -31,12 +28,14 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
     }
 
     useEffect(() => {
-        fetchContent().then(data => {
-            setContent(data);
-        }).catch(error => {
-            console.error("Error fetching content:", error);
-            setValid(false);
-        });
+        if (!content) {
+            fetchContent().then(data => {
+                setContent(data);
+            }).catch(error => {
+                console.error("Error fetching content:", error);
+                setValid(false);
+            });
+        }
     }, []);
 
     useEffect(() => {
@@ -50,12 +49,22 @@ const ProjectDetailsPage = (props: { blogPosts: Project[]; }) => {
         }
     }, [content]);
 
+    //if the content is undefined and the local storage is written
+    if(!content) {
+        const item = localStorage.getItem('CONTENT_STATE');
+        if(item !== null) {
+            setContent(JSON.parse(item));
+        }
+    }
+    //if the content is still undefined
     if (!content) {
-        if(valid) {
-            return <CircularProgress/>;
+        if (valid) {
+            return <div style={{padding: "50%"}}><CircularProgress/></div>;
         }
         return <div>Blog not found!</div>;
     }
+    //if the content is set
+    window.localStorage.setItem('CONTENT_STATE', JSON.stringify(content));
     return (
         <section>
             <Header navigations={navigations}/>

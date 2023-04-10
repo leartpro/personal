@@ -24,6 +24,7 @@ const HomePage= ({ projects }: { projects: Project[] }) => {
         });
     }, []);
 
+    localStorage.clear();
     return (
         <div>
             <Header navigations={navigations}/>
